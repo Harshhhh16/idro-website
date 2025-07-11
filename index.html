@@ -1,82 +1,92 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>IDRO – Research and Innovation Foundation</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Indian Defence & Robotics Organisation</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <div class="topbar">
-      <div class="logo">
-        <img src="images/idro-logo.png" alt="IDRO Logo" />
-        <div>
-          <h1>IDRO</h1>
-          <p>Research and Innovation Foundation</p>
+  <header class="hero">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo-section">
+          <img src="images/logo.png" alt="IDRO Logo" class="logo">
+        </div>
+        <div class="text-section">
+          <p class="sanskrit">युवशक्तिः विज्ञानाय, विज्ञानं भारतरक्षणाय।</p>
+          <h1>Indian Defence & Robotics Organisation</h1>
+          <p class="subtitle">Research and Innovation Foundation</p>
         </div>
       </div>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#team">Team</a>
-        <a href="#contact">Contact</a>
-      </nav>
     </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="container">
-        <h2>Empowering Indigenous Defense & Robotics Innovation</h2>
-        <p>Building the future of India’s defense through student-led technology and research</p>
-      </div>
-    </section>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      color: #222;
+    }
 
-    <section id="about" class="section">
-      <div class="container">
-        <h2>About IDRO</h2>
-        <p>
-          IDRO – Research and Innovation Foundation is a student-driven initiative aimed at fostering indigenous defense technology, robotics innovation, and UAV development in India. We honor the legacies of Dr. A.P.J. Abdul Kalam and Chhatrapati Shivaji Maharaj through our vision for a self-reliant India.
-        </p>
-      </div>
-    </section>
+    .hero {
+      background: url('images/background.jpg') no-repeat center center/cover;
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+    }
 
-    <section id="projects" class="section alt">
-      <div class="container">
-        <h2>Flagship Projects</h2>
-        <ul>
-          <li>🚁 Firefighting Surveillance Drone with 4G/5G Streaming</li>
-          <li>✈️ Kamikaze UAV with Advanced Navigation</li>
-          <li>⚙️ Custom Flight Controller – Project Chanakya</li>
-        </ul>
-      </div>
-    </section>
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
 
-    <section id="team" class="section">
-      <div class="container">
-        <h2>Our Team</h2>
-        <ul>
-          <li><strong>Harsh Dhanawade</strong> – Founder & Director</li>
-          <li>Project Heads, Interns & Student Contributors</li>
-        </ul>
-      </div>
-    </section>
+    .header-content {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
 
-    <section id="contact" class="section alt">
-      <div class="container">
-        <h2>Contact Us</h2>
-        <p>Email: <a href="mailto:idro.foundation@gmail.com">idro.foundation@gmail.com</a></p>
-        <p>LinkedIn: <a href="#">linkedin.com/company/idro</a></p>
-        <p>GitHub: <a href="#">github.com/idro-foundation</a></p>
-      </div>
-    </section>
-  </main>
+    .logo-section {
+      flex: 1;
+      min-width: 150px;
+      text-align: left;
+    }
 
-  <footer>
-    <div class="container">
-      <p>© 2025 IDRO – Research and Innovation Foundation | Inspired by Bharat</p>
-    </div>
-  </footer>
+    .logo {
+      height: 100px;
+      width: auto;
+    }
+
+    .text-section {
+      flex: 3;
+      text-align: left;
+    }
+
+    .sanskrit {
+      font-size: 1.1rem;
+      color: #ffd700;
+      font-weight: bold;
+      font-family: 'Devanagari', serif;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+
+    .subtitle {
+      font-size: 1.3rem;
+      margin-top: 8px;
+      font-weight: 300;
+      color: #ccc;
+    }
+  </style>
 </body>
 </html>
