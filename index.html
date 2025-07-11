@@ -1,316 +1,260 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IDRO – Indian Defence & Robotics Organisation</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <style>
-        /* General Body & Typography */
-        body {
-            margin: 0;
-            font-family: 'Roboto', sans-serif;
-            background-color: #f8f8f8; /* Light background */
-            color: #333;
-            line-height: 1.6;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IDRO – Indian Defence & Robotics Organisation</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    :root {
+      --primary-color: #003366;
+      --secondary-color: #001f3f;
+      --accent-color: #ffd700;
+      --bg-light: #f4f4f4;
+      --bg-dark: #0b0f17;
+      --text-light: #fff;
+      --text-dark: #222;
+    }
 
-        h1, h2, h3 {
-            color: #002244; /* Dark blue for headings */
-            font-weight: 700;
-            margin-top: 0;
-            margin-bottom: 10px;
-        }
+    [data-theme="dark"] {
+      --bg-light: #0b0f17;
+      --text-dark: #f4f4f4;
+    }
 
-        p {
-            color: #555;
-            margin-bottom: 10px;
-        }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg-light);
+      color: var(--text-dark);
+      transition: background 0.3s, color 0.3s;
+    }
 
-        /* Header Section */
-        header {
-            text-align: center;
-            padding: 30px 20px;
-            background-color: #ffffff;
-            border-bottom: 2px solid #eee;
-        }
+    header {
+      background: url('images/BANNER Linkdin.png') no-repeat center/cover;
+      height: 300px;
+    }
 
-        .header-content {
-            max-width: 960px;
-            margin: 0 auto;
-        }
+    nav {
+      display: flex;
+      justify-content: center;
+      background: var(--secondary-color);
+      padding: 12px;
+      flex-wrap: wrap;
+    }
 
-        .header-content .tagline-sanskrit {
-            font-family: 'Arial Unicode MS', sans-serif; /* Fallback for Sanskrit */
-            font-size: 1.1rem; /* Small heading */
-            color: #555;
-            margin-bottom: 5px;
-            display: block;
-            font-weight: normal;
-        }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      font-size: 16px;
+      transition: 0.3s;
+    }
 
-        .header-content h1 {
-            font-size: 2.2rem; /* Main line */
-            color: #002244;
-            margin-bottom: 0;
-            text-transform: uppercase; /* Match bold look */
-        }
+    nav a:hover {
+      color: var(--accent-color);
+    }
 
-        .header-content .sub-heading {
-            font-size: 1.1rem;
-            color: #777;
-            margin-top: 5px;
-            display: block;
-        }
+    .theme-toggle {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background: var(--primary-color);
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
 
-        /* Navigation */
-        nav {
-            background: #001f3f; /* Dark blue nav bar */
-            padding: 10px 20px;
-            display: flex;
-            align-items: center; /* Vertically align logo and links */
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            max-width: 960px; /* Constrain to main content width */
-            margin: 0 auto; /* Center the nav bar */
-            justify-content: flex-start; /* Align logo and links to start */
-        }
+    .hero {
+      text-align: center;
+      padding: 50px 20px;
+      background-color: #fff;
+    }
 
-        .nav-logo {
-            margin-right: 30px; /* Space between logo and links */
-        }
+    .hero h1 {
+      font-size: 2.4rem;
+      color: var(--primary-color);
+    }
 
-        .nav-logo img {
-            height: 40px; /* Smaller logo */
-            width: auto;
-            display: block;
-            border-radius: 5px; /* Slightly rounded for a professional touch */
-        }
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 800px;
+      margin: 0 auto;
+      color: #444;
+    }
 
-        .nav-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px; /* Space between nav links */
-        }
+    .section {
+      padding: 60px 20px;
+      background: #f9f9f9;
+      text-align: center;
+    }
 
-        nav a {
-            color: #e6efff;
-            text-decoration: none;
-            font-weight: 400;
-            font-size: 0.95rem;
-            padding: 5px 0;
-            transition: color 0.3s ease;
-            white-space: nowrap; /* Keep links on one line */
-            text-transform: uppercase; /* Match sketched look */
-        }
+    .section.white-bg {
+      background-color: #fff;
+    }
 
-        nav a:hover {
-            color: #ffd700; /* Gold accent on hover */
-        }
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: var(--primary-color);
+    }
 
-        /* Main Content Structure */
-        .main-content-wrapper {
-            max-width: 960px;
-            margin: 20px auto; /* Center with some margin */
-            padding: 0 20px;
-        }
+    .section p {
+      max-width: 900px;
+      margin: auto;
+      font-size: 1rem;
+      color: #333;
+    }
 
-        .welcome-kalam-section {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: flex-start; /* Align items to the top */
-            margin-bottom: 30px;
-        }
+    .kalam-vision-section {
+      padding: 60px 20px;
+      background-color: #fff;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      text-align: left;
+      gap: 30px;
+    }
 
-        .welcome-section {
-            flex: 1 1 45%; /* Takes about half width */
-            background-color: #fff;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            margin-right: 20px; /* Space between this and Kalam section */
-        }
+    .vision-box {
+      flex: 1 1 400px;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
 
-        .kalam-section {
-            flex: 1 1 45%; /* Takes about half width */
-            background-color: #fff;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            text-align: center;
-        }
+    .vision-box h3 {
+      color: var(--primary-color);
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+    }
 
-        .kalam-section img {
-            width: 150px; /* Size for Kalam image */
-            height: 150px;
-            border-radius: 50%; /* Circular image */
-            object-fit: cover;
-            border: 3px solid #002244;
-            margin-bottom: 15px;
-        }
-        .kalam-section p {
-            font-weight: 500;
-            color: #002244;
-            font-size: 1.1rem;
-        }
+    .vision-box p {
+      font-size: 1.1rem;
+      color: #333;
+    }
 
-        .general-content-section {
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            margin-bottom: 30px;
-        }
+    .kalam-image {
+      flex: 1 1 300px;
+    }
 
-        /* Footer */
-        footer {
-            background-color: #001f3f;
-            color: white;
-            text-align: center;
-            padding: 20px 10px;
-            font-size: 0.9rem;
-        }
+    .kalam-image img {
+      width: 100%;
+      max-width: 350px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
 
-        footer a {
-            color: #ffd700;
-            margin: 0 10px;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        footer a:hover {
-            color: #ffffff;
-        }
+    .video-section {
+      padding: 60px 20px;
+      text-align: center;
+      background: #f0f8ff;
+    }
 
-        /* Responsive Adjustments */
-        @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-                align-items: flex-start; /* Align logo top-left */
-                padding: 10px 15px;
-            }
-            .nav-logo {
-                margin-bottom: 15px;
-                margin-right: 0;
-            }
-            .nav-links {
-                width: 100%;
-                justify-content: center; /* Center links below logo */
-                gap: 15px;
-            }
-            nav a {
-                margin: 0 5px;
-                font-size: 0.85rem;
-            }
-            .header-content h1 { font-size: 1.8rem; }
-            .header-content .sub-heading { font-size: 1rem; }
-            .header-content .tagline-sanskrit { font-size: 1rem; }
+    .video-section iframe {
+      width: 90%;
+      max-width: 800px;
+      height: 450px;
+      border: none;
+      border-radius: 12px;
+    }
 
-            .welcome-kalam-section {
-                flex-direction: column;
-                gap: 20px;
-            }
-            .welcome-section, .kalam-section {
-                margin-right: 0; /* Remove side margin when stacked */
-                width: 100%;
-                flex: none; /* Disable flex shrinking/growing */
-            }
-        }
+    footer {
+      background-color: var(--secondary-color);
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+      font-size: 0.95rem;
+    }
 
-        @media (max-width: 480px) {
-            .header-content h1 { font-size: 1.5rem; }
-            .header-content .sub-heading { font-size: 0.9rem; }
-            .header-content .tagline-sanskrit { font-size: 0.9rem; }
-            .nav-logo img { height: 35px; }
-            .nav-links { gap: 10px; }
-            nav a { font-size: 0.8rem; padding: 3px 0; }
-            .welcome-section, .kalam-section, .general-content-section { padding: 20px; }
-        }
-    </style>
+    footer a {
+      color: var(--accent-color);
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      .kalam-vision-section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .vision-box {
+        max-width: 95%;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <span class="tagline-sanskrit">युवशक्तिः विज्ञानाय, विज्ञानं भारतरक्षणाय।</span>
-            <h1>INDIAN DEFENCE & ROBOTICS ORGANISATION</h1>
-            <span class="sub-heading">Research & Innovation Foundation</span>
-        </div>
-    </header>
+  <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
 
-    <nav>
-        <div class="nav-logo">
-            <a href="#home">
-                <img src="http://googleusercontent.com/file_content/0" alt="IDRO Logo"> </a>
-        </div>
-        <div class="nav-links">
-            <a href="#home">Home</a>
-            <a href="#about">About Us</a>
-            <a href="#projects">Projects</a>
-            <a href="#get-involved">Join Us</a>
-            <a href="#media">Media</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </nav>
+  <header></header>
 
-    <div class="main-content-wrapper">
-        <section class="welcome-kalam-section">
-            <div class="welcome-section" id="home">
-                <h2>Welcome to IDRO</h2>
-                <p>IDRO is a student-led research initiative dedicated to building indigenous defense and robotic technologies to support national security, emergency response, and societal development.</p>
-                <p>We empower youth through innovation.</p>
-                <p>More detailed text about IDRO's mission and purpose can go here, expanding on the hero section's initial message.</p>
-            </div>
-            <div class="kalam-section">
-                <img src="https://via.placeholder.com/150/003366/FFFFFF?text=Dr.+Kalam" alt="Dr. APJ Abdul Kalam">
-                <p>Dr. APJ Abdul Kalam Sir Image</p>
-            </div>
-        </section>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#about">About</a>
+    <a href="#vision">Kalam's Vision</a>
+    <a href="#video">Independence Day</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-        <section class="general-content-section" id="content">
-            <h2>Our Core Activities</h2>
-            <p>This section can be used for general content that you want to display prominently. It's a versatile area for introducing key aspects of your organization or recent highlights.</p>
-            <ul>
-                <li>Developing indigenous technologies in UAVs and robotics.</li>
-                <li>Conducting workshops and training programs for students.</li>
-                <li>Fostering a collaborative environment for young innovators.</li>
-                <li>Engaging in research for national defense applications.</li>
-            </ul>
-            <p>You can add more paragraphs, images, or even small cards here to describe different aspects of your work.</p>
-        </section>
+  <section class="hero">
+    <h1>Empowering Youth through Innovation in Defence & Robotics</h1>
+    <p>
+      IDRO is a student-led research initiative dedicated to building indigenous defense and robotic technologies to support national security, emergency response, and societal development.
+    </p>
+  </section>
 
-        <section class="general-content-section" id="about">
-            <h2>About Us Details</h2>
-            <p>This is where more detailed information about IDRO can go, including our history, values, and the team structure. This section is currently a placeholder to reflect your sketch's 'content' area for 'About us'.</p>
-        </section>
+  <section class="section" id="about">
+    <h2>About IDRO</h2>
+    <p>
+      The Indian Defence & Robotics Organisation (IDRO) is a mission-driven platform for students and innovators focused on developing advanced technologies for drones, robotics, and autonomous systems. Inspired by national pride and driven by technological excellence, IDRO aims to make India self-reliant in defense tech through open research and collaboration.
+    </p>
+  </section>
 
-        <section class="general-content-section" id="projects">
-            <h2>Our Projects Showcase</h2>
-            <p>A dedicated area for showcasing our innovative projects in defence and robotics. Each project can have its own card or detailed page.</p>
-        </section>
-
-        <section class="general-content-section" id="get-involved">
-            <h2>How to Join Us</h2>
-            <p>Information on how students, researchers, and other individuals can join IDRO's initiatives, participate in events, or contribute to our mission.</p>
-        </section>
-
-        <section class="general-content-section" id="media">
-            <h2>IDRO in Media</h2>
-            <p>News articles, press releases, video highlights, and image galleries related to IDRO's achievements and events will be featured here.</p>
-        </section>
-
-        <section class="general-content-section" id="contact">
-            <h2>Reach Out To Us</h2>
-            <p>Full contact details, including email, address, and a contact form, will be provided in this section for inquiries and collaborations.</p>
-        </section>
-
+  <section class="kalam-vision-section" id="vision">
+    <div class="vision-box">
+      <h3>Dr. A.P.J. Abdul Kalam’s Vision</h3>
+      <p>
+        <strong>“Dream is not that which you see while sleeping, it is something that does not let you sleep.”</strong><br /><br />
+        Dr. Kalam believed in the power of youth and innovation to shape the future of the nation. IDRO draws inspiration from his dreams to contribute towards a technologically advanced and self-reliant Bharat.
+      </p>
     </div>
+    <div class="kalam-image">
+      <img src="images/kalam.jpg" alt="Dr. A.P.J. Abdul Kalam" />
+    </div>
+  </section>
 
-    <footer>
-        <p>© 2025 IDRO – Research and Innovation Foundation | <a href="#">Copyright</a> | <a href="#">Feedback</a></p>
-    </footer>
+  <section class="video-section" id="video">
+    <h2>15 August Drone Flag Hoisting</h2>
+    <p>Watch our special Independence Day tribute powered by drone technology.</p>
+    <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe>
+  </section>
+
+  <section class="section" id="contact">
+    <h2>Contact Us</h2>
+    <p>
+      📧 Email: idro.foundation@gmail.com<br />
+      📍 Pune, Maharashtra, India
+    </p>
+  </section>
+
+  <footer>
+    <p>
+      © 2025 IDRO – Research and Innovation Foundation | <a href="#">GitHub</a> |
+      <a href="#">Feedback</a>
+    </p>
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      html.dataset.theme = html.dataset.theme === "dark" ? "light" : "dark";
+    }
+  </script>
 </body>
 </html>
