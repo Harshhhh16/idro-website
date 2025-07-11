@@ -18,8 +18,7 @@
       justify-content: space-between;
       align-items: center;
       padding: 1rem 2rem;
-      background-color: rgba(0, 0, 0, 0.8);
-      backdrop-filter: blur(10px);
+      background-color: rgba(0, 0, 0, 0.85);
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -30,7 +29,9 @@
       gap: 10px;
     }
     .logo-img {
-      height: 50px;
+      height: 55px;
+      width: auto;
+      object-fit: contain;
     }
     .logo-text {
       font-family: 'Orbitron', sans-serif;
@@ -70,8 +71,7 @@
       font-size: 1.2rem;
       margin-top: 1rem;
       max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
+      margin: 1rem auto;
     }
     .cta-button {
       margin-top: 2rem;
@@ -105,8 +105,8 @@
     }
     iframe {
       width: 90%;
-      max-width: 700px;
-      height: 350px;
+      max-width: 720px;
+      height: 405px;
       border: 2px solid #00ffff;
       border-radius: 10px;
     }
@@ -156,7 +156,6 @@
     <nav>
       <a href="#home"><i class="fas fa-home"></i> Home</a>
       <a href="#about"><i class="fas fa-circle-info"></i> About</a>
-      <a href="#projects"><i class="fas fa-satellite"></i> Projects</a>
       <a href="#join"><i class="fas fa-user-plus"></i> Join</a>
       <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
     </nav>
@@ -169,50 +168,44 @@
 
   <section id="home" class="hero">
     <h1>Indian Defense & Robotics Organization</h1>
-    <p>Innovating India's future in Defense, Aerospace, and Robotics with indigenous technology and youth-powered research.</p>
+    <p>
+      We are on a mission to revolutionize India's defense and robotics sector through open innovation, indigenous development, and youth-led research.
+    </p>
     <a href="#join"><button class="cta-button">Join the Mission 🚀</button></a>
   </section>
 
   <section id="about">
-    <h2>🔍 About IDRO</h2>
+    <h2>🌟 Our Mission</h2>
     <p>
-      IDRO – Research and Innovation Foundation is a student-led initiative dedicated to building indigenous military and robotic technologies for India.
+      IDRO – Research & Innovation Foundation is driven by students and engineers who believe in building India’s technological backbone. From developing advanced drones to crafting autonomous systems, we’re making India Atmanirbhar.
     </p>
-  </section>
+    <br>
+    <h2>🇮🇳 Highlight: Flag-Hoisting Drone</h2>
+    <p>On 15th August, we proudly launched a drone that unfurled the Indian flag mid-air, a tribute to our heroes and technology built by Indian youth.</p>
 
-  <section id="projects">
-    <h2>🛰️ Key Projects</h2>
-    <p>
-      - Long-range UAVs with GPS/Video<br/>
-      - Firefighting and disaster drones<br/>
-      - Kamikaze attack drones<br/>
-      - AI-based autonomous control<br/>
-      - Secure telemetry & communications
-    </p>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Flag Hoisting Drone - IDRO" allowfullscreen></iframe>
+    </div>
   </section>
 
   <section id="join">
     <h2>🤝 Join the Movement</h2>
     <p>
-      Students, engineers, makers – collaborate with us on national innovation. Open source. Indian made. Globally capable.
+      Students, engineers, and makers – collaborate with us to build defense, disaster-response, and surveillance solutions. Contribute your skills to a greater cause.
     </p>
     <a href="mailto:idro.innovation@gmail.com"><button class="cta-button">Apply Now</button></a>
   </section>
 
   <section id="contact">
-    <h2>📩 Contact & Media</h2>
+    <h2>📩 Contact & Social Media</h2>
     <p>Email: <a href="mailto:idro.innovation@gmail.com">idro.innovation@gmail.com</a></p>
-    <p>Socials & Updates:</p>
+    <p>Stay connected with us:</p>
 
     <div class="social-icons">
       <a href="https://linkedin.com/company/idro-foundation" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
       <a href="https://instagram.com/idro.india" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
       <a href="https://youtube.com/@idro" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
       <a href="https://forms.gle/feedback" target="_blank" title="Feedback"><i class="fas fa-comments"></i></a>
-    </div>
-
-    <div class="video-container">
-      <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Intro Video" allowfullscreen></iframe>
     </div>
   </section>
 
