@@ -64,23 +64,47 @@
       font-size: 1rem;
       color: #333;
     }
-    .grid {
+    .vision-section {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      margin-top: 30px;
+      align-items: center;
+      gap: 30px;
+      background-color: #fff;
+      padding: 60px 20px;
     }
-    .card {
+    .vision-text {
+      flex: 1 1 400px;
+      max-width: 600px;
+      text-align: left;
+    }
+    .vision-text h3 {
+      color: #002244;
+      font-size: 1.6rem;
+    }
+    .vision-text p {
+      font-size: 1rem;
+      color: #333;
+    }
+    .vision-image {
       flex: 1 1 300px;
-      background: white;
-      margin: 15px;
-      padding: 25px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
-    .card h3 {
-      margin-top: 0;
-      color: #004080;
+    .vision-image img {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    .video-section {
+      padding: 60px 20px;
+      text-align: center;
+      background-color: #f0f8ff;
+    }
+    .video-section iframe {
+      width: 90%;
+      max-width: 800px;
+      height: 450px;
+      border: none;
+      border-radius: 12px;
     }
     footer {
       background-color: #001f3f;
@@ -94,12 +118,12 @@
       margin: 0 10px;
       text-decoration: none;
     }
-    @media (max-width: 600px) {
-      .hero h1 {
-        font-size: 1.8rem;
+    @media (max-width: 768px) {
+      .vision-section {
+        flex-direction: column;
       }
-      .section h2 {
-        font-size: 1.5rem;
+      .vision-text {
+        text-align: center;
       }
     }
   </style>
@@ -110,9 +134,8 @@
   <nav>
     <a href="#">Home</a>
     <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#team">Team</a>
-    <a href="#join">Join Us</a>
+    <a href="#vision">Vision</a>
+    <a href="#video">Independence Day</a>
     <a href="#contact">Contact</a>
   </nav>
 
@@ -130,36 +153,23 @@
     </p>
   </section>
 
-  <section class="section" id="projects">
-    <h2>Our Projects</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Surveillance Drone</h3>
-        <p>Long-range UAV with 4G/5G video streaming, GPS tracking, and thermal imaging for border and disaster monitoring.</p>
-      </div>
-      <div class="card">
-        <h3>Firefighter Drone</h3>
-        <p>Equipped with live camera, payload drop mechanism, and remote control to assist in firefighting and rescue operations.</p>
-      </div>
-      <div class="card">
-        <h3>AI-Powered Robot</h3>
-        <p>Autonomous ground robot for surveillance, object detection, and obstacle avoidance in critical missions.</p>
-      </div>
+  <section class="vision-section" id="vision">
+    <div class="vision-text">
+      <h3>Dr. A.P.J. Abdul Kalam’s Vision</h3>
+      <p>
+        “Dream is not that which you see while sleeping, it is something that does not let you sleep.”<br><br>
+        Dr. Kalam envisioned a self-reliant India empowered by youth, innovation, and advanced technologies. IDRO is inspired by his legacy to bridge the gap between academic brilliance and national service. We aim to turn his dream of a technologically empowered Bharat into reality.
+      </p>
+    </div>
+    <div class="vision-image">
+      <img src="images/kalam.jpg" alt="Dr. A.P.J. Abdul Kalam">
     </div>
   </section>
 
-  <section class="section" id="team">
-    <h2>Our Team</h2>
-    <p>
-      A multidisciplinary team of electronics, robotics, and AI enthusiasts across various Indian institutions, committed to defense innovation. We are united by vision, discipline, and our love for Bharat.
-    </p>
-  </section>
-
-  <section class="section" id="join">
-    <h2>Join the Movement</h2>
-    <p>
-      Want to contribute your skills to national service through technology? Whether you're a coder, hardware builder, designer, or researcher — IDRO invites you to join hands in making an impact.
-    </p>
+  <section class="video-section" id="video">
+    <h2>Independence Day Project: Drone Flag Hoisting</h2>
+    <p>On 15th August, IDRO proudly launched a drone for remote flag hoisting in celebration of India’s independence. Watch our milestone moment:</p>
+    <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE" allowfullscreen></iframe>
   </section>
 
   <section class="section" id="contact">
