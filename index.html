@@ -1,189 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IDRO – Indian Defence & Robotics Organisation</title>
   <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f4f4f4;
-      color: #222;
-    }
+    body { margin:0; font-family:'Segoe UI',sans-serif; background:#f4f4f4; }
     header {
-      background: url('images/BANNER Linkdin.png') no-repeat center center/cover;
-      height: 280px;
+      background:url('images/BANNER Linkdin.png') no-repeat center/cover;
+      height: 300px;
+      position: relative;
     }
-    nav {
-      display: flex;
-      justify-content: center;
-      background-color: #001f3f;
-      padding: 14px;
-      flex-wrap: wrap;
+    .kalam-topright {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 140px;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
     }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-      font-size: 16px;
-      transition: 0.3s;
-    }
-    nav a:hover {
-      color: #ffd700;
-    }
-    .hero {
-      text-align: center;
-      padding: 50px 20px;
-      background-color: #fff;
-    }
-    .hero h1 {
-      font-size: 2.4rem;
-      color: #003366;
-    }
-    .hero p {
-      font-size: 1.1rem;
-      max-width: 800px;
-      margin: 0 auto;
-      color: #444;
-    }
-    .section {
-      padding: 60px 20px;
-      background-color: #f9f9f9;
-      text-align: center;
-    }
-    .section h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
+    .vision-top {
+      position: absolute;
+      top: 30px;
+      left: 20px;
+      max-width: 50%;
+      background: rgba(255,255,255,0.8);
+      padding: 15px 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
       color: #002244;
     }
-    .section p {
-      max-width: 900px;
-      margin: auto;
-      font-size: 1rem;
-      color: #333;
-    }
-    .vision-section {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      gap: 30px;
-      background-color: #fff;
-      padding: 60px 20px;
-    }
-    .vision-text {
-      flex: 1 1 400px;
-      max-width: 600px;
-      text-align: left;
-    }
-    .vision-text h3 {
-      color: #002244;
-      font-size: 1.6rem;
-    }
-    .vision-text p {
-      font-size: 1rem;
-      color: #333;
-    }
-    .vision-image {
-      flex: 1 1 300px;
-    }
-    .vision-image img {
-      max-width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    }
-    .video-section {
-      padding: 60px 20px;
-      text-align: center;
-      background-color: #f0f8ff;
-    }
-    .video-section iframe {
-      width: 90%;
-      max-width: 800px;
-      height: 450px;
-      border: none;
-      border-radius: 12px;
-    }
-    footer {
-      background-color: #001f3f;
-      color: white;
-      text-align: center;
-      padding: 20px 10px;
-      font-size: 0.95rem;
-    }
-    footer a {
-      color: #ffd700;
-      margin: 0 10px;
-      text-decoration: none;
-    }
-    @media (max-width: 768px) {
-      .vision-section {
-        flex-direction: column;
-      }
-      .vision-text {
-        text-align: center;
-      }
-    }
+    nav { display:flex; justify-content:center; background:#001f3f; padding:12px; flex-wrap:wrap; }
+    nav a { color:#fff; margin:0 15px; font-weight:bold; text-decoration:none; transition:color .3s; }
+    nav a:hover { color:#ffd700; }
+    .section {padding:60px 20px; background:#f9f9f9; text-align:center;}
+    .section h2 {color:#002244; font-size:2rem; margin-bottom:20px;}
+    .section p {max-width:900px; margin:auto; font-size:1rem; color:#333;}
+    .video-section {padding:60px 20px; text-align:center; background:#f0f8ff;}
+    .video-section iframe {width:90%; max-width:800px; height:450px; border:none; border-radius:12px;}
+    footer {background:#001f3f; color:#fff; text-align:center; padding:20px 10px; font-size:.95rem;}
+    footer a {color:#ffd700; text-decoration:none; margin:0 10px;}
   </style>
 </head>
 <body>
-  <header></header>
+  <header>
+    <img src="images/kalam.jpg" alt="Dr. A.P.J. Abdul Kalam" class="kalam-topright">
+    <div class="vision-top">
+      <h3>Dr. A.P.J. Abdul Kalam</h3>
+      <p>“Dream is not that which you see while sleeping, it is something that does not let you sleep.”</p>
+    </div>
+  </header>
 
   <nav>
-    <a href="#">Home</a>
-    <a href="#about">About</a>
-    <a href="#vision">Vision</a>
-    <a href="#video">Independence Day</a>
-    <a href="#contact">Contact</a>
+    <a href="#">Home</a><a href="#about">About</a><a href="#vision">Vision</a>
+    <a href="#video">Independence Day</a><a href="#contact">Contact</a>
   </nav>
-
-  <section class="hero">
-    <h1>Empowering Youth through Innovation in Defence & Robotics</h1>
-    <p>
-      IDRO is a student-led research initiative dedicated to building indigenous defense and robotic technologies to support national security, emergency response, and societal development.
-    </p>
-  </section>
 
   <section class="section" id="about">
     <h2>About IDRO</h2>
     <p>
-      The Indian Defence & Robotics Organisation (IDRO) is a mission-driven platform for students and innovators focused on developing advanced technologies for drones, robotics, and autonomous systems. Inspired by national pride and driven by technological excellence, IDRO aims to make India self-reliant in defense tech through open research and collaboration.
+      The Indian Defence & Robotics Organisation (IDRO) is a student-run foundation pioneering indigenous defence technology. We’re driven by passion, innovation, and national pride.
     </p>
   </section>
 
-  <section class="vision-section" id="vision">
-    <div class="vision-text">
-      <h3>Dr. A.P.J. Abdul Kalam’s Vision</h3>
-      <p>
-        “Dream is not that which you see while sleeping, it is something that does not let you sleep.”<br><br>
-        Dr. Kalam envisioned a self-reliant India empowered by youth, innovation, and advanced technologies. IDRO is inspired by his legacy to bridge the gap between academic brilliance and national service. We aim to turn his dream of a technologically empowered Bharat into reality.
-      </p>
-    </div>
-    <div class="vision-image">
-      <img src="images/kalam.jpg" alt="Dr. A.P.J. Abdul Kalam">
-    </div>
-  </section>
-
   <section class="video-section" id="video">
-    <h2>Independence Day Project: Drone Flag Hoisting</h2>
-    <p>On 15th August, IDRO proudly launched a drone for remote flag hoisting in celebration of India’s independence. Watch our milestone moment:</p>
-    <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE" allowfullscreen></iframe>
+    <h2>15 August Flag Hoisting Drone</h2>
+    <p>Watch our drone flag-hoisting demonstration on Indian Independence Day:</p>
+    <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID"></iframe>
   </section>
 
   <section class="section" id="contact">
     <h2>Contact Us</h2>
-    <p>
-      📧 Email: idro.foundation@gmail.com<br>
-      📍 Location: Pune, Maharashtra, India
-    </p>
+    <p>📧 idro.foundation@gmail.com <br>📍 Pune, Maharashtra, India</p>
   </section>
 
   <footer>
-    <p>
-      © 2025 IDRO – Research and Innovation Foundation | <a href="#">GitHub</a> | <a href="#">Feedback</a> | <a href="#">Privacy</a>
-    </p>
+    © 2025 IDRO – Research and Innovation Foundation | <a href="#">GitHub</a> | <a href="#">Feedback</a>
   </footer>
 </body>
 </html>
