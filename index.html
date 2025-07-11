@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IDRO – Indian Defence & Robotics Organisation</title>
+  <meta name="description" content="IDRO is a student-led research initiative dedicated to building indigenous defense and robotic technologies for national security, emergency response, and societal development.">
+  <meta name="keywords" content="IDRO, Defence, Robotics, India, Research, Drones, Innovation, Students">
+  <meta property="og:title" content="IDRO – Indian Defence & Robotics Organisation">
+  <meta property="og:description" content="Empowering Youth through Innovation in Defence & Robotics.">
+  <meta property="og:type" content="website">
   <style>
     body { margin:0; font-family:'Segoe UI',sans-serif; background:#f4f4f4; color:#222; }
     header {
@@ -11,10 +16,10 @@
       height: 300px;
     }
     nav {
-      display:flex; justify-content:center; background:#001f3f; padding:12px; flex-wrap:wrap; 
+      display:flex; justify-content:center; background:#001f3f; padding:12px; flex-wrap:wrap;
     }
     nav a {
-      color:white; text-decoration:none; margin:0 15px; font-weight:bold; font-size:16px; transition:.3s; 
+      color:white; text-decoration:none; margin:0 15px; font-weight:bold; font-size:16px; transition:.3s;
     }
     nav a:hover { color:#ffd700; }
     .hero {
@@ -76,6 +81,49 @@
     .video-section iframe {
       width:90%; max-width:800px; height:450px; border:none; border-radius:12px;
     }
+    .team-container, .projects-container {
+      display:flex;justify-content:center;flex-wrap:wrap;gap:30px;
+    }
+    .team-member, .project-card {
+      background:#fff;padding:20px;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,0.07);
+      width:220px;
+      margin-bottom:20px;
+      text-align:center;
+    }
+    .team-member img {
+      width:100px;border-radius:50%;margin-bottom:10px;
+    }
+    .project-card {
+      width:300px;
+      text-align:left;
+    }
+    .events-list {
+      max-width:700px;margin:auto;text-align:left;
+    }
+    .newsletter-form, .join-form {
+      max-width:400px;margin:auto;text-align:left;
+    }
+    .newsletter-form input, .join-form input, .join-form textarea {
+      width:100%;padding:8px;margin-bottom:10px;border:1px solid #ccc;border-radius:4px;
+    }
+    .newsletter-form button, .join-form button {
+      background:#003366;color:#fff;padding:8px 16px;border:none;border-radius:4px;cursor:pointer;
+    }
+    .gallery-container {
+      display:flex;flex-wrap:wrap;justify-content:center;gap:20px;
+    }
+    .gallery-container img {
+      width:200px;height:140px;object-fit:cover;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.07);
+    }
+    .faq-list {
+      max-width:800px;margin:auto;text-align:left;
+    }
+    .partners-container {
+      display:flex;flex-wrap:wrap;justify-content:center;gap:30px;margin-top:20px;
+    }
+    .partners-container img {
+      width:120px;height:auto;object-fit:contain;background:#fff;padding:10px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.07);
+    }
     footer {
       background-color: #001f3f;
       color: white;
@@ -91,6 +139,8 @@
     @media (max-width: 768px) {
       .kalam-vision-section { flex-direction: column; text-align: center; }
       .vision-box { max-width: 95%; }
+      .team-container, .projects-container, .gallery-container, .partners-container { flex-direction:column;align-items:center; }
+      .team-member, .project-card, .gallery-container img, .partners-container img { width:90%; max-width:350px; }
     }
   </style>
 </head>
@@ -98,8 +148,18 @@
   <header></header>
 
   <nav>
-    <a href="#">Home</a><a href="#about">About</a><a href="#vision">Kalam's Vision</a>
-    <a href="#video">Independence Day</a><a href="#contact">Contact</a>
+    <a href="#">Home</a>
+    <a href="#about">About</a>
+    <a href="#vision">Kalam's Vision</a>
+    <a href="#projects">Projects</a>
+    <a href="#team">Team</a>
+    <a href="#events">Events</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#faq">FAQ</a>
+    <a href="#partners">Partners</a>
+    <a href="#join">Join Us</a>
+    <a href="#newsletter">Newsletter</a>
+    <a href="#contact">Contact</a>
   </nav>
 
   <section class="hero">
@@ -129,10 +189,97 @@
     </div>
   </section>
 
+  <section class="section" id="projects">
+    <h2>Our Projects</h2>
+    <div class="projects-container">
+      <div class="project-card">
+        <h3>Autonomous Surveillance Drone</h3>
+        <p>Developed an indigenous drone for border surveillance with AI-powered object detection.</p>
+      </div>
+      <div class="project-card">
+        <h3>Disaster Response Robot</h3>
+        <p>Designed a mobile robot to assist in search and rescue operations during natural disasters.</p>
+      </div>
+      <!-- Add more projects as needed -->
+    </div>
+  </section>
+
+  <section class="section" id="team">
+    <h2>Our Team</h2>
+    <div class="team-container">
+      <div class="team-member">
+        <img src="images/team1.jpg" alt="Dr. S. Sharma">
+        <h3>Dr. S. Sharma</h3>
+        <p>Founder & Director</p>
+      </div>
+      <div class="team-member">
+        <img src="images/team2.jpg" alt="Ms. A. Patel">
+        <h3>Ms. A. Patel</h3>
+        <p>Lead Robotics Engineer</p>
+      </div>
+      <!-- Add more team members as needed -->
+    </div>
+  </section>
+
+  <section class="section" id="events">
+    <h2>Events & Achievements</h2>
+    <ul class="events-list">
+      <li>Winner, National Robotics Challenge 2024</li>
+      <li>Organized Workshop on Defence Robotics, March 2025</li>
+      <!-- Add more events -->
+    </ul>
+  </section>
+
   <section class="video-section" id="video">
     <h2>15 August Drone Flag Hoisting</h2>
     <p>Watch our special Independence Day tribute powered by drone technology.</p>
-    <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen title="IDRO Independence Day Drone Tribute"></iframe>
+  </section>
+
+  <section class="section" id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery-container">
+      <img src="images/event1.jpg" alt="Robotics Workshop">
+      <img src="images/event2.jpg" alt="Drone Field Test">
+      <!-- Add more gallery images as needed -->
+    </div>
+  </section>
+
+  <section class="section" id="faq">
+    <h2>Frequently Asked Questions</h2>
+    <ul class="faq-list">
+      <li><strong>How can I join IDRO?</strong> – Visit the Join Us section and fill out the form.</li>
+      <li><strong>Who can participate in IDRO projects?</strong> – Students and researchers passionate about defence and robotics.</li>
+      <!-- Add more FAQs -->
+    </ul>
+  </section>
+
+  <section class="section" id="partners">
+    <h2>Our Partners & Collaborators</h2>
+    <div class="partners-container">
+      <img src="images/partner1.png" alt="Partner 1">
+      <img src="images/partner2.png" alt="Partner 2">
+      <!-- Add more partner logos as needed -->
+    </div>
+  </section>
+
+  <section class="section" id="join">
+    <h2>Join IDRO</h2>
+    <p>Interested in contributing to defence and robotics innovation? Fill out the form below to join our mission!</p>
+    <form class="join-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Why do you want to join?" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <section class="section" id="newsletter">
+    <h2>Stay Updated</h2>
+    <form class="newsletter-form">
+      <input type="email" placeholder="Enter your email" required>
+      <button type="submit">Subscribe</button>
+    </form>
   </section>
 
   <section class="section" id="contact">
@@ -145,7 +292,12 @@
 
   <footer>
     <p>
-      © 2025 IDRO – Research and Innovation Foundation | <a href="#">GitHub</a> | <a href="#">Feedback</a>
+      © 2025 IDRO – Research and Innovation Foundation |
+      <a href="#">GitHub</a> |
+      <a href="#">Feedback</a> |
+      <a href="https://linkedin.com/" target="_blank">LinkedIn</a> |
+      <a href="https://twitter.com/" target="_blank">Twitter</a> |
+      <a href="https://instagram.com/" target="_blank">Instagram</a>
     </p>
   </footer>
 </body>
