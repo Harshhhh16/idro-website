@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Indian Defence & Robotics Organisation</title>
+  <title>Indian Defence & Robotics Organisation – IDRO</title>
   <link rel="stylesheet" href="style.css">
   <style>
     body {
@@ -14,27 +14,28 @@
     header {
       background: linear-gradient(to right, #003366, #004080);
       color: white;
-      padding: 20px;
+      padding: 25px;
       text-align: center;
     }
     .sanskrit {
       font-size: 1.2rem;
       font-weight: bold;
       color: #ffd700;
+      margin-bottom: 8px;
     }
     .org-title {
-      font-size: 2rem;
-      margin: 10px 0 5px;
+      font-size: 2.2rem;
+      margin: 8px 0 5px;
     }
     .subtitle {
       font-size: 1rem;
-      color: #ccc;
+      color: #ddd;
     }
     nav {
       display: flex;
       justify-content: center;
       background-color: #002244;
-      padding: 10px;
+      padding: 12px;
       flex-wrap: wrap;
     }
     nav a {
@@ -43,38 +44,75 @@
       margin: 0 15px;
       padding: 5px 10px;
       font-weight: bold;
+      transition: background 0.3s;
+    }
+    nav a:hover {
+      background-color: #004488;
+      border-radius: 5px;
     }
     .main-content {
       display: flex;
       flex-wrap: wrap;
-      padding: 30px 20px;
+      padding: 40px 20px;
       justify-content: space-around;
       background-color: #fff;
     }
     .welcome-box, .kalam-box {
-      flex: 1 1 300px;
-      margin: 10px;
-      padding: 20px;
-      background: #eaeaea;
+      flex: 1 1 320px;
+      margin: 15px;
+      padding: 25px;
+      background: #f0f0f0;
       border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .welcome-box h2 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
     }
     .kalam-box img {
       max-width: 100%;
       border-radius: 10px;
+      margin-top: 10px;
     }
     .content-section {
-      padding: 30px 20px;
+      padding: 40px 20px;
+      background-color: #e6eef3;
       text-align: center;
+    }
+    .content-section h2 {
+      font-size: 1.6rem;
+      margin-bottom: 15px;
+    }
+    .content-section p {
+      font-size: 1rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    .mission-vision {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 40px;
+    }
+    .mission-vision div {
+      flex: 1 1 300px;
+      margin: 10px;
+      padding: 20px;
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
     footer {
       background-color: #002244;
       color: white;
       text-align: center;
-      padding: 15px;
+      padding: 20px;
+      font-size: 0.9rem;
     }
     footer a {
       color: #ffd700;
-      margin: 0 10px;
+      margin: 0 12px;
+      text-decoration: none;
     }
   </style>
 </head>
@@ -96,22 +134,34 @@
 
   <section class="main-content">
     <div class="welcome-box">
-      <h2>Welcome to <br><strong>IDRO</strong></h2>
-      <p>[Text about IDRO, mission, purpose etc]</p>
+      <h2>Welcome to <strong>IDRO</strong></h2>
+      <p>
+        IDRO is a student-led initiative driving innovation in defense technologies, robotics systems, and UAV development — inspired by the vision of a self-reliant Bharat.
+        We aim to empower young innovators and contribute to India’s national development.
+      </p>
     </div>
     <div class="kalam-box">
-      <h3>Dr. A.P.J. Kalam</h3>
+      <h3>Dr. A.P.J. Abdul Kalam</h3>
       <img src="images/kalam.jpg" alt="Dr. Kalam">
     </div>
   </section>
 
   <section class="content-section">
-    <h2>Content</h2>
-    <p>This section will hold main content about IDRO activities, goals, or initiatives.</p>
+    <h2>Our Mission & Vision</h2>
+    <div class="mission-vision">
+      <div>
+        <h3>Mission</h3>
+        <p>To nurture indigenous technological capabilities among youth and deliver innovative solutions for defense and national interest.</p>
+      </div>
+      <div>
+        <h3>Vision</h3>
+        <p>To establish India as a global hub of defense robotics and self-reliant innovation through student-driven research and collaboration.</p>
+      </div>
+    </div>
   </section>
 
   <footer>
-    <p>© 2025 IDRO | <a href="#">Copyright</a> | <a href="#">Feedback</a></p>
+    <p>© 2025 IDRO – Research and Innovation Foundation | <a href="#">Copyright</a> | <a href="#">Feedback</a></p>
   </footer>
 </body>
 </html>
