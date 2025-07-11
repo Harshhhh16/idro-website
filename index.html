@@ -4,11 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IDRO – Indian Defence & Robotics Organisation</title>
-  <meta name="description" content="IDRO is a student-led research initiative dedicated to building indigenous defense and robotic technologies for national security, emergency response, and societal development.">
-  <meta name="keywords" content="IDRO, Defence, Robotics, India, Research, Drones, Innovation, Students">
-  <meta property="og:title" content="IDRO – Indian Defence & Robotics Organisation">
-  <meta property="og:description" content="Empowering Youth through Innovation in Defence & Robotics.">
-  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     body { margin:0; font-family:'Segoe UI',sans-serif; background:#f4f4f4; color:#222; }
     header {
@@ -16,10 +12,10 @@
       height: 300px;
     }
     nav {
-      display:flex; justify-content:center; background:#001f3f; padding:12px; flex-wrap:wrap;
+      display:flex; justify-content:center; background:#001f3f; padding:12px; flex-wrap:wrap; 
     }
     nav a {
-      color:white; text-decoration:none; margin:0 15px; font-weight:bold; font-size:16px; transition:.3s;
+      color:white; text-decoration:none; margin:0 15px; font-weight:bold; font-size:16px; transition:.3s; 
     }
     nav a:hover { color:#ffd700; }
     .hero {
@@ -33,6 +29,9 @@
     }
     .section {
       padding:60px 20px; background:#f9f9f9; text-align:center;
+    }
+    .section.white-bg {
+      background-color: #fff;
     }
     .section h2 {
       font-size:2rem; margin-bottom:20px; color:#002244;
@@ -81,49 +80,194 @@
     .video-section iframe {
       width:90%; max-width:800px; height:450px; border:none; border-radius:12px;
     }
-    .team-container, .projects-container {
-      display:flex;justify-content:center;flex-wrap:wrap;gap:30px;
+
+    /* New Additions Styles */
+    .mission-vision-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 40px;
     }
-    .team-member, .project-card {
-      background:#fff;padding:20px;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,0.07);
-      width:220px;
-      margin-bottom:20px;
-      text-align:center;
+    .mission-vision-item {
+      background: #e6f7ff;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      flex: 1 1 45%;
+      min-width: 300px;
+      text-align: left;
     }
-    .team-member img {
-      width:100px;border-radius:50%;margin-bottom:10px;
+    .mission-vision-item h3 {
+      color: #003366;
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
     }
     .project-card {
-      width:300px;
-      text-align:left;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      overflow: hidden;
+      text-align: left;
     }
-    .events-list {
-      max-width:700px;margin:auto;text-align:left;
+    .project-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
     }
-    .newsletter-form, .join-form {
-      max-width:400px;margin:auto;text-align:left;
+    .project-card-content {
+      padding: 20px;
     }
-    .newsletter-form input, .join-form input, .join-form textarea {
-      width:100%;padding:8px;margin-bottom:10px;border:1px solid #ccc;border-radius:4px;
+    .project-card h3 {
+      color: #002244;
+      font-size: 1.4rem;
+      margin-bottom: 10px;
     }
-    .newsletter-form button, .join-form button {
-      background:#003366;color:#fff;padding:8px 16px;border:none;border-radius:4px;cursor:pointer;
+    .project-card p {
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 15px;
     }
-    .gallery-container {
-      display:flex;flex-wrap:wrap;justify-content:center;gap:20px;
+    .project-card .btn {
+      display: inline-block;
+      background-color: #003366;
+      color: white;
+      padding: 8px 15px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s;
     }
-    .gallery-container img {
-      width:200px;height:140px;object-fit:cover;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.07);
+    .project-card .btn:hover {
+      background-color: #004488;
     }
-    .faq-list {
-      max-width:800px;margin:auto;text-align:left;
+
+    .contact-form-container {
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 30px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      text-align: left;
     }
-    .partners-container {
-      display:flex;flex-wrap:wrap;justify-content:center;gap:30px;margin-top:20px;
+    .contact-form-container label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #333;
     }
-    .partners-container img {
-      width:120px;height:auto;object-fit:contain;background:#fff;padding:10px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.07);
+    .contact-form-container input,
+    .contact-form-container textarea {
+      width: calc(100% - 20px);
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 1rem;
     }
+    .contact-form-container textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+    .contact-form-container button {
+      background-color: #003366;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .contact-form-container button:hover {
+      background-color: #004488;
+    }
+    .social-icons {
+      margin-top: 20px;
+      text-align: center;
+    }
+    .social-icons a {
+      color: #003366;
+      font-size: 2rem;
+      margin: 0 15px;
+      transition: color 0.3s;
+    }
+    .social-icons a:hover {
+      color: #ffd700;
+    }
+
+    .get-involved-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 40px;
+    }
+    .get-involved-card {
+        background: #fff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        flex: 1 1 300px;
+        text-align: center;
+    }
+    .get-involved-card h3 {
+        color: #002244;
+        font-size: 1.6rem;
+        margin-bottom: 15px;
+    }
+    .get-involved-card p {
+        font-size: 1rem;
+        color: #444;
+        margin-bottom: 20px;
+    }
+    .get-involved-card .btn {
+        display: inline-block;
+        background-color: #003366;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s;
+    }
+    .get-involved-card .btn:hover {
+        background-color: #004488;
+    }
+
+    .news-event-card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      margin-bottom: 20px;
+      text-align: left;
+    }
+    .news-event-card h3 {
+      color: #002244;
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+    .news-event-card p {
+      font-size: 0.95rem;
+      color: #555;
+      line-height: 1.5;
+    }
+    .news-event-card .date {
+      font-size: 0.85rem;
+      color: #888;
+      margin-bottom: 5px;
+    }
+
     footer {
       background-color: #001f3f;
       color: white;
@@ -136,11 +280,12 @@
       margin: 0 10px;
       text-decoration: none;
     }
+
     @media (max-width: 768px) {
       .kalam-vision-section { flex-direction: column; text-align: center; }
       .vision-box { max-width: 95%; }
-      .team-container, .projects-container, .gallery-container, .partners-container { flex-direction:column;align-items:center; }
-      .team-member, .project-card, .gallery-container img, .partners-container img { width:90%; max-width:350px; }
+      .mission-vision-item { flex: 1 1 95%; }
+      .video-section iframe { height: 300px; }
     }
   </style>
 </head>
@@ -150,15 +295,11 @@
   <nav>
     <a href="#">Home</a>
     <a href="#about">About</a>
-    <a href="#vision">Kalam's Vision</a>
+    <a href="#mission-vision">Mission & Vision</a>
     <a href="#projects">Projects</a>
-    <a href="#team">Team</a>
-    <a href="#events">Events</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#faq">FAQ</a>
-    <a href="#partners">Partners</a>
-    <a href="#join">Join Us</a>
-    <a href="#newsletter">Newsletter</a>
+    <a href="#news-events">News & Events</a>
+    <a href="#video">Independence Day</a>
+    <a href="#get-involved">Get Involved</a>
     <a href="#contact">Contact</a>
   </nav>
 
@@ -173,7 +314,23 @@
     <h2>About IDRO</h2>
     <p>
       The Indian Defence & Robotics Organisation (IDRO) is a mission-driven platform for students and innovators focused on developing advanced technologies for drones, robotics, and autonomous systems. Inspired by national pride and driven by technological excellence, IDRO aims to make India self-reliant in defense tech through open research and collaboration.
+      <br><br>
+      We foster an environment of creativity and critical thinking, encouraging young minds to tackle real-world challenges in defence and humanitarian aid through innovative technological solutions.
     </p>
+  </section>
+
+  <section class="section white-bg" id="mission-vision">
+    <h2>Our Mission & Vision</h2>
+    <div class="mission-vision-grid">
+      <div class="mission-vision-item">
+        <h3>Our Mission</h3>
+        <p>To empower Indian youth with the knowledge and skills to innovate in defence and robotics, fostering a culture of indigenous research and development, and contributing to national security and self-reliance.</p>
+      </div>
+      <div class="mission-vision-item">
+        <h3>Our Vision</h3>
+        <p>To be a leading hub for student-led innovation in defence and robotics in India, recognized for our cutting-edge technologies, impactful projects, and for nurturing the next generation of scientific leaders.</p>
+      </div>
+    </div>
   </section>
 
   <section class="kalam-vision-section" id="vision">
@@ -181,7 +338,7 @@
       <h3>Dr. A.P.J. Abdul Kalam’s Vision</h3>
       <p>
         <strong>“Dream is not that which you see while sleeping, it is something that does not let you sleep.”</strong><br><br>
-        Dr. Kalam believed in the power of youth and innovation to shape the future of the nation. IDRO draws inspiration from his dreams to contribute towards a technologically advanced and self-reliant Bharat.
+        Dr. Kalam believed in the power of youth and innovation to shape the future of the nation. IDRO draws inspiration from his dreams to contribute towards a technologically advanced and self-reliant Bharat. We strive to embody his spirit of relentless pursuit of knowledge and dedication to national service through technological advancement.
       </p>
     </div>
     <div class="kalam-image">
@@ -190,114 +347,127 @@
   </section>
 
   <section class="section" id="projects">
-    <h2>Our Projects</h2>
-    <div class="projects-container">
+    <h2>Our Projects & Areas of Focus</h2>
+    <p>Discover some of the innovative projects and key areas where IDRO is making a difference.</p>
+    <div class="projects-grid">
       <div class="project-card">
-        <h3>Autonomous Surveillance Drone</h3>
-        <p>Developed an indigenous drone for border surveillance with AI-powered object detection.</p>
+        <img src="images/project-drone.jpg" alt="Autonomous Surveillance Drone">
+        <div class="project-card-content">
+          <h3>Autonomous Surveillance Drone</h3>
+          <p>Developing AI-powered drones for border security and critical infrastructure monitoring, capable of autonomous navigation and threat detection.</p>
+          <a href="#" class="btn">Learn More</a>
+        </div>
       </div>
       <div class="project-card">
-        <h3>Disaster Response Robot</h3>
-        <p>Designed a mobile robot to assist in search and rescue operations during natural disasters.</p>
+        <img src="images/project-robotics.jpg" alt="Disaster Response Robotics">
+        <div class="project-card-content">
+          <h3>Disaster Response Robotics</h3>
+          <p>Designing robust robotic systems for search and rescue operations in hazardous environments, minimizing human exposure to danger.</p>
+          <a href="#" class="btn">Learn More</a>
+        </div>
       </div>
-      <!-- Add more projects as needed -->
-    </div>
+      <div class="project-card">
+        <img src="images/project-ai.jpg" alt="AI for Defence Applications">
+        <div class="project-card-content">
+          <h3>AI for Defence Applications</h3>
+          <p>Researching and implementing artificial intelligence algorithms for enhanced decision-making, pattern recognition, and predictive analysis in defence scenarios.</p>
+          <a href="#" class="btn">Learn More</a>
+        </div>
+      </div>
+      </div>
+    <p style="margin-top: 40px;"><strong>Key Areas of Focus:</strong> UAV Systems, AI & Machine Learning, Mechatronics, Computer Vision, Autonomous Systems, Cyber-Physical Security.</p>
   </section>
 
-  <section class="section" id="team">
-    <h2>Our Team</h2>
-    <div class="team-container">
-      <div class="team-member">
-        <img src="images/team1.jpg" alt="Dr. S. Sharma">
-        <h3>Dr. S. Sharma</h3>
-        <p>Founder & Director</p>
-      </div>
-      <div class="team-member">
-        <img src="images/team2.jpg" alt="Ms. A. Patel">
-        <h3>Ms. A. Patel</h3>
-        <p>Lead Robotics Engineer</p>
-      </div>
-      <!-- Add more team members as needed -->
+  <section class="section white-bg" id="news-events">
+    <h2>News & Events</h2>
+    <p>Stay updated with our latest activities, achievements, and upcoming events.</p>
+    <div class="news-event-card">
+      <p class="date">July 1, 2025</p>
+      <h3>IDRO Team Secures Top Spot in National Robotics Challenge</h3>
+      <p>Our team, 'Innovators United,' won first place at the National Robotics Challenge for their innovative waste management robot. This achievement highlights our commitment to practical solutions.</p>
     </div>
-  </section>
-
-  <section class="section" id="events">
-    <h2>Events & Achievements</h2>
-    <ul class="events-list">
-      <li>Winner, National Robotics Challenge 2024</li>
-      <li>Organized Workshop on Defence Robotics, March 2025</li>
-      <!-- Add more events -->
-    </ul>
-  </section>
+    <div class="news-event-card">
+      <p class="date">June 15, 2025</p>
+      <h3>Upcoming Webinar: Future of Drone Technology in India</h3>
+      <p>Join us on [Date] for an insightful webinar featuring industry experts discussing the advancements and future prospects of drone technology in India. Register now!</p>
+    </div>
+    <div class="news-event-card">
+        <p class="date">May 20, 2025</p>
+        <h3>Partnership Announcement: IDRO Collaborates with [University Name]</h3>
+        <p>We are thrilled to announce our new academic partnership with [University Name] to foster collaborative research in AI and autonomous systems for defence applications.</p>
+      </div>
+    </section>
 
   <section class="video-section" id="video">
     <h2>15 August Drone Flag Hoisting</h2>
     <p>Watch our special Independence Day tribute powered by drone technology.</p>
-    <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen title="IDRO Independence Day Drone Tribute"></iframe>
+    <iframe src="https://www.youtube.com/embed/YOUR_YOUTUBE_VIDEO_ID" title="15 August Drone Flag Hoisting" allowfullscreen></iframe>
+    <p style="margin-top: 20px; font-size: 0.95rem; color: #555;">(Replace "YOUR_YOUTUBE_VIDEO_ID" with the actual video ID from YouTube. For example, if the URL is https://www.youtube.com/watch?v=dQw4w9WgXcQ, the ID is dQw4w9WgXcQ)</p>
   </section>
 
-  <section class="section" id="gallery">
-    <h2>Gallery</h2>
-    <div class="gallery-container">
-      <img src="images/event1.jpg" alt="Robotics Workshop">
-      <img src="images/event2.jpg" alt="Drone Field Test">
-      <!-- Add more gallery images as needed -->
+  <section class="section" id="get-involved">
+    <h2>Get Involved with IDRO</h2>
+    <p>Whether you're a student, an innovator, or an organization, there are many ways to contribute to IDRO's mission.</p>
+    <div class="get-involved-grid">
+        <div class="get-involved-card">
+            <h3>Join Our Team</h3>
+            <p>Passionate students and young professionals eager to work on cutting-edge defence and robotics projects are encouraged to apply.</p>
+            <a href="#" class="btn">Apply Now</a>
+        </div>
+        <div class="get-involved-card">
+            <h3>Collaborate With Us</h3>
+            <p>We welcome partnerships with academic institutions, industry leaders, and government organizations for research and development.</p>
+            <a href="#" class="btn">Partner With Us</a>
+        </div>
+        <div class="get-involved-card">
+            <h3>Support Our Initiatives</h3>
+            <p>Your support helps us fund research, acquire resources, and organize impactful programs for the youth.</p>
+            <a href="#" class="btn">Support IDRO</a>
+        </div>
     </div>
   </section>
 
-  <section class="section" id="faq">
-    <h2>Frequently Asked Questions</h2>
-    <ul class="faq-list">
-      <li><strong>How can I join IDRO?</strong> – Visit the Join Us section and fill out the form.</li>
-      <li><strong>Who can participate in IDRO projects?</strong> – Students and researchers passionate about defence and robotics.</li>
-      <!-- Add more FAQs -->
-    </ul>
-  </section>
-
-  <section class="section" id="partners">
-    <h2>Our Partners & Collaborators</h2>
-    <div class="partners-container">
-      <img src="images/partner1.png" alt="Partner 1">
-      <img src="images/partner2.png" alt="Partner 2">
-      <!-- Add more partner logos as needed -->
-    </div>
-  </section>
-
-  <section class="section" id="join">
-    <h2>Join IDRO</h2>
-    <p>Interested in contributing to defence and robotics innovation? Fill out the form below to join our mission!</p>
-    <form class="join-form">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Why do you want to join?" required></textarea>
-      <button type="submit">Submit</button>
-    </form>
-  </section>
-
-  <section class="section" id="newsletter">
-    <h2>Stay Updated</h2>
-    <form class="newsletter-form">
-      <input type="email" placeholder="Enter your email" required>
-      <button type="submit">Subscribe</button>
-    </form>
-  </section>
-
-  <section class="section" id="contact">
+  <section class="section white-bg" id="contact">
     <h2>Contact Us</h2>
-    <p>
-      📧 Email: idro.foundation@gmail.com<br>
+    <p style="margin-bottom: 30px;">
+      We'd love to hear from you! Reach out with your inquiries, collaboration proposals, or feedback.
+    </p>
+    <div class="contact-form-container">
+      <form action="YOUR_FORM_SUBMISSION_ENDPOINT" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject">
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+    <p style="margin-top: 20px;">
+      📧 Email: <a href="mailto:idro.foundation@gmail.com" style="color:#003366; text-decoration:none; font-weight:bold;">idro.foundation@gmail.com</a><br>
       📍 Pune, Maharashtra, India
     </p>
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/company/idro-foundation" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://twitter.com/IDRO_Foundation" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.youtube.com/channel/YOUR_YOUTUBE_CHANNEL_ID" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.instagram.com/idro_foundation" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      </div>
   </section>
 
   <footer>
     <p>
-      © 2025 IDRO – Research and Innovation Foundation |
-      <a href="#">GitHub</a> |
-      <a href="#">Feedback</a> |
-      <a href="https://linkedin.com/" target="_blank">LinkedIn</a> |
-      <a href="https://twitter.com/" target="_blank">Twitter</a> |
-      <a href="https://instagram.com/" target="_blank">Instagram</a>
+      © 2025 IDRO – Research and Innovation Foundation | 
+      <a href="https://harshhhh16.github.io/idro-website/">GitHub</a> | 
+      <a href="#">Privacy Policy</a> | 
+      <a href="#">Terms of Service</a> |
+      <a href="#contact">Feedback</a>
     </p>
   </footer>
 </body>
