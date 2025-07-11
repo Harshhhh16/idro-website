@@ -7,8 +7,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
-    body {
+    * {
       margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+    body {
       font-family: 'Roboto', sans-serif;
       background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
       color: white;
@@ -18,21 +22,28 @@
       justify-content: space-between;
       align-items: center;
       padding: 1rem 2rem;
-      background-color: rgba(0, 0, 0, 0.7);
+      background-color: rgba(0, 0, 0, 0.8);
       backdrop-filter: blur(10px);
       position: sticky;
       top: 0;
       z-index: 1000;
     }
-    .logo {
+    .logo-container {
+      display: flex;
+      align-items: center;
+    }
+    .logo-img {
+      height: 40px;
+      margin-right: 10px;
+    }
+    .logo-text {
       font-family: 'Orbitron', sans-serif;
       font-size: 1.5rem;
-      letter-spacing: 2px;
       color: #00ffff;
     }
     nav {
       display: flex;
-      gap: 1.5rem;
+      gap: 1.2rem;
     }
     nav a {
       text-decoration: none;
@@ -75,24 +86,47 @@
       background-color: #00cccc;
       transform: scale(1.05);
     }
-    .section {
+    section {
       padding: 4rem 2rem;
       text-align: center;
     }
-    .section h2 {
+    section h2 {
       font-size: 2rem;
       margin-bottom: 1rem;
       color: #00ffff;
     }
+    iframe {
+      width: 90%;
+      max-width: 700px;
+      height: 300px;
+      border: 2px solid #00ffff;
+      border-radius: 10px;
+      margin-top: 1rem;
+    }
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+      font-size: 1.5rem;
+    }
+    .social-icons a {
+      color: #fff;
+      transition: color 0.3s;
+    }
+    .social-icons a:hover {
+      color: #00ffff;
+    }
     .footer {
       text-align: center;
-      padding: 2rem;
+      padding: 2rem 1rem;
       background-color: rgba(0, 0, 0, 0.8);
       font-size: 0.9rem;
       color: #aaa;
     }
-    .nav-icons i {
-      margin-right: 6px;
+    .footer a {
+      color: #00ffff;
+      text-decoration: none;
     }
     @media (max-width: 768px) {
       .hero h1 { font-size: 2.2rem; }
@@ -108,39 +142,69 @@
 <body>
 
   <header>
-    <div class="logo">IDRO</div>
-    <nav class="nav-icons">
-      <a href="#"><i class="fas fa-home"></i> Home</a>
-      <a href="#"><i class="fas fa-circle-info"></i> About</a>
-      <a href="#"><i class="fas fa-satellite"></i> Projects</a>
-      <a href="#"><i class="fas fa-user-plus"></i> Join Us</a>
-      <a href="#"><i class="fas fa-photo-video"></i> Media</a>
-      <a href="#"><i class="fas fa-envelope"></i> Contact</a>
+    <div class="logo-container">
+      <img src="final logo PNG.png" alt="IDRO Logo" class="logo-img">
+      <div class="logo-text">IDRO</div>
+    </div>
+    <nav>
+      <a href="#home"><i class="fas fa-home"></i> Home</a>
+      <a href="#about"><i class="fas fa-circle-info"></i> About</a>
+      <a href="#projects"><i class="fas fa-satellite"></i> Projects</a>
+      <a href="#join"><i class="fas fa-user-plus"></i> Join</a>
+      <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
     </nav>
   </header>
 
-  <section class="hero">
+  <section id="home" class="hero">
     <h1>Indian Defense & Robotics Organization</h1>
-    <p>Building India’s Future in Defense, Aerospace, and Robotics through indigenous innovation, youth power, and open-source technology.</p>
-    <button class="cta-button">Join the Mission 🚀</button>
+    <p>Innovating India's future in Defense, Aerospace, and Robotics with indigenous technology and youth-powered research.</p>
+    <a href="#join"><button class="cta-button">Join the Mission 🚀</button></a>
   </section>
 
-  <section class="section">
-    <h2>🔧 What We Do</h2>
+  <section id="about">
+    <h2>🔍 About IDRO</h2>
     <p>
-      At IDRO, we design next-generation drones, robotics, and defense systems inspired by India’s spirit of innovation and self-reliance (Atmanirbhar Bharat).
+      IDRO – Research and Innovation Foundation is a student-led initiative dedicated to building indigenous military and robotic technologies for India.
     </p>
   </section>
 
-  <section class="section">
-    <h2>🎯 Our Vision</h2>
+  <section id="projects">
+    <h2>🛰️ Key Projects</h2>
     <p>
-      Empower students, engineers, and researchers to contribute to national security and technological advancement through open collaboration.
+      - Long-range UAVs with GPS/Video<br/>
+      - Firefighting and disaster drones<br/>
+      - Kamikaze attack drones<br/>
+      - AI-based autonomous control<br/>
+      - Secure telemetry & communications
     </p>
+  </section>
+
+  <section id="join">
+    <h2>🤝 Join the Movement</h2>
+    <p>
+      Students, engineers, makers – collaborate with us on national innovation. Open source. Indian made. Globally capable.
+    </p>
+    <a href="mailto:idro.innovation@gmail.com"><button class="cta-button">Apply Now</button></a>
+  </section>
+
+  <section id="contact">
+    <h2>📩 Contact Us</h2>
+    <p>Email: <a href="mailto:idro.innovation@gmail.com">idro.innovation@gmail.com</a></p>
+    <p>Location: Pune, Maharashtra, India</p>
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.1806920305553!2d73.85674331536478!3d18.51672618741461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c07045555555%3A0xabcdefabcdef!2sPune!5e0!3m2!1sen!2sin!4v171234567890" allowfullscreen="" loading="lazy"></iframe>
+
+    <div class="social-icons">
+      <a href="https://linkedin.com/company/idro-foundation" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://instagram.com/idro.india" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://youtube.com/@idro" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+      <a href="https://forms.gle/feedback" target="_blank" title="Feedback"><i class="fas fa-comments"></i></a>
+    </div>
   </section>
 
   <footer class="footer">
-    © 2025 IDRO – Research and Innovation Foundation. All rights reserved.
+    © 2025 IDRO – Research and Innovation Foundation.<br>
+    Made with 💙 for Bharat. | <a href="https://forms.gle/feedback" target="_blank">Give Feedback</a>
   </footer>
 
 </body>
