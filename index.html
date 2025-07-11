@@ -7,11 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      scroll-behavior: smooth;
-    }
+    * { margin: 0; padding: 0; scroll-behavior: smooth; }
     body {
       font-family: 'Roboto', sans-serif;
       background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
@@ -31,14 +27,14 @@
     .logo-container {
       display: flex;
       align-items: center;
+      gap: 10px;
     }
     .logo-img {
-      height: 40px;
-      margin-right: 10px;
+      height: 50px;
     }
     .logo-text {
       font-family: 'Orbitron', sans-serif;
-      font-size: 1.5rem;
+      font-size: 1.6rem;
       color: #00ffff;
     }
     nav {
@@ -54,9 +50,16 @@
     nav a:hover {
       color: #00ffff;
     }
+    .tagline {
+      text-align: center;
+      font-size: 1.1rem;
+      margin-top: 0.4rem;
+      font-style: italic;
+      color: #ccc;
+    }
     .hero {
       text-align: center;
-      padding: 6rem 2rem;
+      padding: 6rem 2rem 3rem 2rem;
     }
     .hero h1 {
       font-size: 3rem;
@@ -95,13 +98,17 @@
       margin-bottom: 1rem;
       color: #00ffff;
     }
+    .video-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 1rem;
+    }
     iframe {
       width: 90%;
       max-width: 700px;
-      height: 300px;
+      height: 350px;
       border: 2px solid #00ffff;
       border-radius: 10px;
-      margin-top: 1rem;
     }
     .social-icons {
       display: flex;
@@ -143,7 +150,7 @@
 
   <header>
     <div class="logo-container">
-      <img src="final logo PNG.png" alt="IDRO Logo" class="logo-img">
+      <img src="final_logo.png" alt="IDRO Logo" class="logo-img">
       <div class="logo-text">IDRO</div>
     </div>
     <nav>
@@ -154,6 +161,11 @@
       <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
     </nav>
   </header>
+
+  <div class="tagline">
+    <div>युवशक्तिः विज्ञानाय, विज्ञानं भारतरक्षणाय।</div>
+    <div><em>Youth power for science, and science for the protection of India.</em></div>
+  </div>
 
   <section id="home" class="hero">
     <h1>Indian Defense & Robotics Organization</h1>
@@ -188,17 +200,19 @@
   </section>
 
   <section id="contact">
-    <h2>📩 Contact Us</h2>
+    <h2>📩 Contact & Media</h2>
     <p>Email: <a href="mailto:idro.innovation@gmail.com">idro.innovation@gmail.com</a></p>
-    <p>Location: Pune, Maharashtra, India</p>
-
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.1806920305553!2d73.85674331536478!3d18.51672618741461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c07045555555%3A0xabcdefabcdef!2sPune!5e0!3m2!1sen!2sin!4v171234567890" allowfullscreen="" loading="lazy"></iframe>
+    <p>Socials & Updates:</p>
 
     <div class="social-icons">
       <a href="https://linkedin.com/company/idro-foundation" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
       <a href="https://instagram.com/idro.india" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
       <a href="https://youtube.com/@idro" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
       <a href="https://forms.gle/feedback" target="_blank" title="Feedback"><i class="fas fa-comments"></i></a>
+    </div>
+
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Intro Video" allowfullscreen></iframe>
     </div>
   </section>
 
