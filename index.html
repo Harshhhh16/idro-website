@@ -11,191 +11,224 @@
         body {
             margin: 0;
             font-family: 'Roboto', sans-serif;
-            background-color: #f0f8ff; /* Lightest blue-grey */
-            color: #222;
+            background-color: #f8f8f8; /* Light background */
+            color: #333;
             line-height: 1.6;
         }
 
-        h1, h2, h3, h4 {
-            color: #002244; /* Dark authoritative blue */
+        h1, h2, h3 {
+            color: #002244; /* Dark blue for headings */
             font-weight: 700;
+            margin-top: 0;
+            margin-bottom: 10px;
         }
 
         p {
-            color: #333;
+            color: #555;
+            margin-bottom: 10px;
         }
 
         /* Header Section */
         header {
-            background: url('https://via.placeholder.com/1600x400/003366/FFFFFF?text=IDRO+Hero+Image') no-repeat center center; /* Placeholder image */
-            background-size: cover;
-            background-attachment: fixed;
-            height: 450px; /* Increased height for content */
-            display: flex;
-            align-items: center; /* Vertically center content */
-            justify-content: center; /* Horizontally center content */
-            position: relative;
             text-align: center;
-        }
-
-        header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.6); /* Darker overlay for text readability */
-            z-index: 1;
+            padding: 30px 20px;
+            background-color: #ffffff;
+            border-bottom: 2px solid #eee;
         }
 
         .header-content {
-            z-index: 2;
-            color: white;
-            padding: 20px;
-            max-width: 900px;
-            width: 100%;
+            max-width: 960px;
+            margin: 0 auto;
         }
 
         .header-content .tagline-sanskrit {
             font-family: 'Arial Unicode MS', sans-serif; /* Fallback for Sanskrit */
-            font-size: 1.5rem; /* Small heading */
-            color: #FFB300; /* Accent gold */
-            margin-bottom: 10px;
+            font-size: 1.1rem; /* Small heading */
+            color: #555;
+            margin-bottom: 5px;
             display: block;
-            font-weight: normal; /* Make it a small heading, not bold */
+            font-weight: normal;
         }
 
         .header-content h1 {
-            font-size: 3.8rem; /* Main line, bold */
-            color: #ffffff;
-            margin-bottom: 5px;
-            text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
-            font-weight: bold; /* Explicitly bold */
+            font-size: 2.2rem; /* Main line */
+            color: #002244;
+            margin-bottom: 0;
+            text-transform: uppercase; /* Match bold look */
         }
 
         .header-content .sub-heading {
-            font-size: 1.8rem; /* Research & Innovation Foundation */
-            color: #e6efff; /* Lighter white-blue */
-            margin-top: 0;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
-            font-weight: 300; /* Lighter font weight */
+            font-size: 1.1rem;
+            color: #777;
+            margin-top: 5px;
+            display: block;
         }
 
         /* Navigation */
         nav {
-            background: #001a33; /* Even darker blue for navigation */
-            padding: 15px 0;
+            background: #001f3f; /* Dark blue nav bar */
+            padding: 10px 20px;
             display: flex;
-            justify-content: center;
-            align-items: center; /* Align logo and links */
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            flex-wrap: wrap;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px; /* Max width for nav content */
-            width: 100%;
-            padding: 0 20px; /* Padding for edges */
+            align-items: center; /* Vertically align logo and links */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            max-width: 960px; /* Constrain to main content width */
+            margin: 0 auto; /* Center the nav bar */
+            justify-content: flex-start; /* Align logo and links to start */
         }
 
         .nav-logo {
-            margin-right: auto; /* Push links to the right */
+            margin-right: 30px; /* Space between logo and links */
         }
 
         .nav-logo img {
-            height: 50px; /* Adjust logo size as needed */
+            height: 40px; /* Smaller logo */
             width: auto;
             display: block;
+            border-radius: 5px; /* Slightly rounded for a professional touch */
         }
 
         .nav-links {
             display: flex;
             flex-wrap: wrap;
-            justify-content: flex-end; /* Align links to the right within its container */
+            gap: 20px; /* Space between nav links */
         }
 
         nav a {
-            color: #e6efff; /* Lighter white-blue for links */
+            color: #e6efff;
             text-decoration: none;
-            margin: 0 15px; /* Adjust spacing between links */
-            font-weight: 500;
-            font-size: 1.05rem;
-            transition: color 0.3s ease, transform 0.2s ease;
+            font-weight: 400;
+            font-size: 0.95rem;
             padding: 5px 0;
-            white-space: nowrap; /* Prevent links from wrapping */
+            transition: color 0.3s ease;
+            white-space: nowrap; /* Keep links on one line */
+            text-transform: uppercase; /* Match sketched look */
         }
 
         nav a:hover {
-            color: #FFB300; /* Accent on hover */
-            transform: translateY(-2px);
+            color: #ffd700; /* Gold accent on hover */
         }
 
-        /* General Section Styling (from previous response, included for context) */
-        .section {
-            padding: 80px 20px;
+        /* Main Content Structure */
+        .main-content-wrapper {
+            max-width: 960px;
+            margin: 20px auto; /* Center with some margin */
+            padding: 0 20px;
+        }
+
+        .welcome-kalam-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start; /* Align items to the top */
+            margin-bottom: 30px;
+        }
+
+        .welcome-section {
+            flex: 1 1 45%; /* Takes about half width */
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-right: 20px; /* Space between this and Kalam section */
+        }
+
+        .kalam-section {
+            flex: 1 1 45%; /* Takes about half width */
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
             text-align: center;
         }
-        .section.dark-bg { background-color: #e6efff; }
-        .section.light-bg { background-color: #ffffff; }
-        .section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 40px;
-            position: relative;
-            padding-bottom: 15px;
-            display: inline-block;
+
+        .kalam-section img {
+            width: 150px; /* Size for Kalam image */
+            height: 150px;
+            border-radius: 50%; /* Circular image */
+            object-fit: cover;
+            border: 3px solid #002244;
+            margin-bottom: 15px;
         }
-        .section h2::after {
-            content: '';
-            position: absolute;
-            left: 50%;
-            bottom: 0;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background-color: #FFB300;
-            border-radius: 2px;
-        }
-        .section p {
-            max-width: 900px;
-            margin: auto;
+        .kalam-section p {
+            font-weight: 500;
+            color: #002244;
             font-size: 1.1rem;
-            color: #444;
+        }
+
+        .general-content-section {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #001f3f;
+            color: white;
+            text-align: center;
+            padding: 20px 10px;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #ffd700;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        footer a:hover {
+            color: #ffffff;
         }
 
         /* Responsive Adjustments */
-        @media (max-width: 992px) {
-            .header-content h1 { font-size: 3rem; }
-            .header-content .tagline-sanskrit { font-size: 1.3rem; }
-            .header-content .sub-heading { font-size: 1.5rem; }
-            .nav-container { flex-direction: column; align-items: center; }
-            .nav-logo { margin-right: 0; margin-bottom: 15px; }
-            .nav-links { justify-content: center; width: 100%; }
-            nav a { margin: 0 10px; font-size: 0.95rem; }
-        }
-
         @media (max-width: 768px) {
-            header { height: 350px; }
-            .header-content h1 { font-size: 2.5rem; }
-            .header-content .tagline-sanskrit { font-size: 1.1rem; }
-            .header-content .sub-heading { font-size: 1.2rem; }
-            nav a { margin: 0 8px; font-size: 0.9rem; }
-            .section { padding: 60px 15px; }
+            nav {
+                flex-direction: column;
+                align-items: flex-start; /* Align logo top-left */
+                padding: 10px 15px;
+            }
+            .nav-logo {
+                margin-bottom: 15px;
+                margin-right: 0;
+            }
+            .nav-links {
+                width: 100%;
+                justify-content: center; /* Center links below logo */
+                gap: 15px;
+            }
+            nav a {
+                margin: 0 5px;
+                font-size: 0.85rem;
+            }
+            .header-content h1 { font-size: 1.8rem; }
+            .header-content .sub-heading { font-size: 1rem; }
+            .header-content .tagline-sanskrit { font-size: 1rem; }
+
+            .welcome-kalam-section {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .welcome-section, .kalam-section {
+                margin-right: 0; /* Remove side margin when stacked */
+                width: 100%;
+                flex: none; /* Disable flex shrinking/growing */
+            }
         }
 
         @media (max-width: 480px) {
-            header { height: 300px; }
-            .header-content h1 { font-size: 2rem; }
-            .header-content .tagline-sanskrit { font-size: 1rem; }
-            .header-content .sub-heading { font-size: 1rem; }
-            nav a { margin: 0 5px; font-size: 0.85rem; padding: 3px 0;}
-            .nav-logo img { height: 40px; }
+            .header-content h1 { font-size: 1.5rem; }
+            .header-content .sub-heading { font-size: 0.9rem; }
+            .header-content .tagline-sanskrit { font-size: 0.9rem; }
+            .nav-logo img { height: 35px; }
+            .nav-links { gap: 10px; }
+            nav a { font-size: 0.8rem; padding: 3px 0; }
+            .welcome-section, .kalam-section, .general-content-section { padding: 20px; }
         }
     </style>
 </head>
@@ -209,31 +242,75 @@
     </header>
 
     <nav>
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="#home">
-                    <img src="https://via.placeholder.com/150x50/FFFFFF/000000?text=IDRO+Logo" alt="IDRO Logo">
-                </a>
-            </div>
-            <div class="nav-links">
-                <a href="#home">Home</a>
-                <a href="#about">About Us</a>
-                <a href="#projects">Projects</a>
-                <a href="#get-involved">Get Involved</a>
-                <a href="#news-events">Media</a>
-                <a href="#contact">Contact</a>
-            </div>
+        <div class="nav-logo">
+            <a href="#home">
+                <img src="http://googleusercontent.com/file_content/0" alt="IDRO Logo"> </a>
+        </div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#projects">Projects</a>
+            <a href="#get-involved">Join Us</a>
+            <a href="#media">Media</a>
+            <a href="#contact">Contact</a>
         </div>
     </nav>
 
-    <section class="section dark-bg" id="about">
-        <h2>About IDRO</h2>
-        <p>
-            The Indian Defence & Robotics Organisation (IDRO) is a mission-driven platform for students and innovators focused on developing advanced technologies for drones, robotics, and autonomous systems. Inspired by national pride and driven by technological excellence, IDRO aims to make India self-reliant in defense tech through open research and collaboration.
-            <br><br>
-            We foster an environment of creativity and critical thinking, encouraging young minds to tackle real-world challenges in defence and humanitarian aid through innovative technological solutions.
-        </p>
-    </section>
+    <div class="main-content-wrapper">
+        <section class="welcome-kalam-section">
+            <div class="welcome-section" id="home">
+                <h2>Welcome to IDRO</h2>
+                <p>IDRO is a student-led research initiative dedicated to building indigenous defense and robotic technologies to support national security, emergency response, and societal development.</p>
+                <p>We empower youth through innovation.</p>
+                <p>More detailed text about IDRO's mission and purpose can go here, expanding on the hero section's initial message.</p>
+            </div>
+            <div class="kalam-section">
+                <img src="https://via.placeholder.com/150/003366/FFFFFF?text=Dr.+Kalam" alt="Dr. APJ Abdul Kalam">
+                <p>Dr. APJ Abdul Kalam Sir Image</p>
+            </div>
+        </section>
 
-    </body>
+        <section class="general-content-section" id="content">
+            <h2>Our Core Activities</h2>
+            <p>This section can be used for general content that you want to display prominently. It's a versatile area for introducing key aspects of your organization or recent highlights.</p>
+            <ul>
+                <li>Developing indigenous technologies in UAVs and robotics.</li>
+                <li>Conducting workshops and training programs for students.</li>
+                <li>Fostering a collaborative environment for young innovators.</li>
+                <li>Engaging in research for national defense applications.</li>
+            </ul>
+            <p>You can add more paragraphs, images, or even small cards here to describe different aspects of your work.</p>
+        </section>
+
+        <section class="general-content-section" id="about">
+            <h2>About Us Details</h2>
+            <p>This is where more detailed information about IDRO can go, including our history, values, and the team structure. This section is currently a placeholder to reflect your sketch's 'content' area for 'About us'.</p>
+        </section>
+
+        <section class="general-content-section" id="projects">
+            <h2>Our Projects Showcase</h2>
+            <p>A dedicated area for showcasing our innovative projects in defence and robotics. Each project can have its own card or detailed page.</p>
+        </section>
+
+        <section class="general-content-section" id="get-involved">
+            <h2>How to Join Us</h2>
+            <p>Information on how students, researchers, and other individuals can join IDRO's initiatives, participate in events, or contribute to our mission.</p>
+        </section>
+
+        <section class="general-content-section" id="media">
+            <h2>IDRO in Media</h2>
+            <p>News articles, press releases, video highlights, and image galleries related to IDRO's achievements and events will be featured here.</p>
+        </section>
+
+        <section class="general-content-section" id="contact">
+            <h2>Reach Out To Us</h2>
+            <p>Full contact details, including email, address, and a contact form, will be provided in this section for inquiries and collaborations.</p>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>© 2025 IDRO – Research and Innovation Foundation | <a href="#">Copyright</a> | <a href="#">Feedback</a></p>
+    </footer>
+</body>
 </html>
