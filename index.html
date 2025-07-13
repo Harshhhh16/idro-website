@@ -69,7 +69,7 @@
       gap: 30px;
       margin-top: 2rem;
     }
-    iframe, .gallery-img {
+    iframe {
       width: 90%;
       max-width: 700px;
       height: 400px;
@@ -80,6 +80,13 @@
       width: 300px;
       height: 200px;
       object-fit: cover;
+      object-position: center;
+      border-radius: 10px;
+      border: 2px solid #00ffff;
+      transition: transform 0.3s ease-in-out;
+    }
+    .gallery-img:hover {
+      transform: scale(1.05);
     }
     .button-group {
       display: flex;
@@ -131,11 +138,13 @@
   </style>
 </head>
 <body>
-  <!-- LinkedIn Style Banner Display at the Top -->
+
+  <!-- Banner -->
   <div style="margin: 0 auto; max-width: 100%; padding: 1rem 2rem;">
     <img src="images/BANNER Linkdin.png" alt="IDRO Banner" style="width: 100%; max-height: 300px; object-fit: cover; border-radius: 10px; border: 2px solid #00ffff;">
   </div>
 
+  <!-- Header -->
   <header>
     <div class="logo-container">IDRO</div>
     <nav>
@@ -147,21 +156,24 @@
     </nav>
   </header>
 
+  <!-- Tagline -->
   <div class="tagline">
-  <h1 style="font-family: 'Orbitron', sans-serif; font-size: 2.5rem; color: #00ffff; margin-bottom: 10px;">Indian Defense & Robotics Organization</h1>
-  <p style="font-family: 'Georgia', serif; font-size: 1.4rem; color: #ffcc00; margin: 0.5rem 0;">
-    युवशक्तिः विज्ञानाय, विज्ञानं भारतरक्षणाय।
-  </p>
-  <p style="font-style: italic; color: #ccc;">
-    Youth power for science, and science for the protection of India.
-  </p>
-</div>
+    <h1 style="font-family: 'Orbitron', sans-serif; font-size: 2.5rem; color: #00ffff; margin-bottom: 10px;">Indian Defense & Robotics Organization</h1>
+    <p style="font-family: 'Georgia', serif; font-size: 1.4rem; color: #ffcc00; margin: 0.5rem 0;">
+      युवशक्तिः विज्ञानाय, विज्ञानं भारतरक्षणाय।
+    </p>
+    <p style="font-style: italic; color: #ccc;">
+      Youth power for science, and science for the protection of India.
+    </p>
+  </div>
 
+  <!-- Home Section -->
   <section id="home">
     <h2>Welcome to IDRO</h2>
     <p>We are building India's future in defense and robotics by empowering students, uniting innovators, and developing world-class indigenous technologies. Our mission is to contribute to Bharat's self-reliance through innovation, collaboration, and youth-led research and development.</p>
   </section>
 
+  <!-- Vision Section -->
   <section id="vision">
     <h2>Our Vision</h2>
     <p>To build a self-reliant, secure, and technologically sovereign India by empowering students and innovators to lead the future of defense and robotics.</p>
@@ -170,6 +182,7 @@
     <p>We aim to become a national platform where young minds unite to develop next-gen systems in UAVs, autonomous vehicles, cyber-defense and robotics.</p>
   </section>
 
+  <!-- Media Section -->
   <section id="media">
     <h2>Media & Gallery</h2>
     <div class="video-container">
@@ -182,6 +195,7 @@
     </div>
   </section>
 
+  <!-- Join Section -->
   <section id="join">
     <h2>Join the Movement</h2>
     <p>We're open to both passionate individuals and investors looking to support India's innovation in defense & robotics.</p>
@@ -191,6 +205,7 @@
     </div>
   </section>
 
+  <!-- Contact Section -->
   <section id="contact">
     <h2>Contact & Social Media</h2>
     <p>Email: <a href="mailto:idrofoundation@gmail.com">idrofoundation@gmail.com</a></p>
@@ -202,6 +217,7 @@
     </div>
   </section>
 
+  <!-- Footer -->
   <footer class="footer">
     © 2025 IDRO – Research and Innovation Foundation. Made with 💙 for Bharat. Contribute to India. Inspire Innovation.
   </footer>
