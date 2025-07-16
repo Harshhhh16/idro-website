@@ -276,12 +276,24 @@
   </footer>
 
   <!-- Celebration Scripts -->
-  <script type="module">
-    import { Fireworks } from "https://cdn.jsdelivr.net/npm/fireworks-js@2.1.1/dist/fireworks.module.js";
-    import confetti from "https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.module.mjs";
+  <!-- Celebration Scripts (Non-module) -->
+<script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.1.1/dist/index.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script>
+  window.onload = function () {
+    // Show popup after 2 sec
+    setTimeout(() => {
+      document.getElementById('popup').style.display = 'block';
+      confetti({
+        particleCount: 150,
+        spread: 100,
+        origin: { y: 0.6 }
+      });
+    }, 2000);
 
+    // Start fireworks
     const container = document.getElementById('fireworks-canvas');
-    const fireworks = new Fireworks(container, {
+    const fireworks = new Fireworks.default(container, {
       autoresize: true,
       opacity: 0.5,
       acceleration: 1.05,
@@ -292,19 +304,12 @@
       explosion: 5
     });
     fireworks.start();
-    setTimeout(() => fireworks.stop(), 10000);
 
-    window.onload = function () {
-      setTimeout(() => {
-        document.getElementById('popup').style.display = 'block';
-        confetti({
-          particleCount: 150,
-          spread: 100,
-          origin: { y: 0.6 }
-        });
-      }, 2000);
-    };
-  </script>
+    // Stop after 10 seconds
+    setTimeout(() => fireworks.stop(), 10000);
+  };
+</script>
+
 
 </body>
 </html>
