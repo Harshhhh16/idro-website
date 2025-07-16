@@ -9,7 +9,7 @@
   <link rel="canonical" href="https://idrofoundation.netlify.app/" />
   <title>IDRO – Indian Defense & Robotics Organization</title>
 
-  <!-- ✅ Google Analytics -->
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9BCN2KMNVV"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -21,10 +21,6 @@
   <!-- Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
-  <!-- Fireworks & Confetti -->
-  <script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.1.1/dist/index.umd.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
   <!-- Styles -->
   <style>
@@ -156,6 +152,7 @@
       color: #00ffff;
       text-decoration: none;
     }
+
     /* Popup Modal */
     #popup {
       position: fixed;
@@ -170,9 +167,6 @@
       display: none;
       box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
       text-align: center;
-    }
-    #popup h2 {
-      margin-bottom: 0.5rem;
     }
     #popup button {
       margin-top: 1rem;
@@ -195,7 +189,7 @@
 </head>
 <body>
 
-  <!-- Fireworks & Popup -->
+  <!-- Fireworks Canvas & Popup -->
   <canvas id="fireworks-canvas"></canvas>
   <div id="popup">
     <h2>🎉 Welcome to IDRO 🎉</h2>
@@ -223,21 +217,17 @@
   <!-- Tagline -->
   <div class="tagline">
     <h1 style="font-family: 'Orbitron', sans-serif; font-size: 2.5rem; color: #00ffff; margin-bottom: 10px;">Indian Defense & Robotics Organization</h1>
-    <p style="font-family: 'Georgia', serif; font-size: 1.4rem; color: #ffcc00; margin: 0.5rem 0;">
-      युवशक्तिः विज्ञानाय, विज्ञानं भारतरक्षणाय।
-    </p>
-    <p style="font-style: italic; color: #ccc;">
-      Youth power for science, and science for the protection of India.
-    </p>
+    <p style="font-family: 'Georgia', serif; font-size: 1.4rem; color: #ffcc00;">युवशक्तिः विज्ञानाय, विज्ञानं भारतरक्षणाय।</p>
+    <p style="font-style: italic; color: #ccc;">Youth power for science, and science for the protection of India.</p>
   </div>
 
-  <!-- Home Section -->
+  <!-- Home -->
   <section id="home">
     <h2>Welcome to IDRO</h2>
     <p>We are building India's future in defense and robotics by empowering students, uniting innovators, and developing world-class indigenous technologies. Our mission is to contribute to Bharat's self-reliance through innovation, collaboration, and youth-led research and development.</p>
   </section>
 
-  <!-- Vision Section -->
+  <!-- Vision -->
   <section id="vision">
     <h2>Our Vision</h2>
     <p>To build a self-reliant, secure, and technologically sovereign India by empowering students and innovators to lead the future of defense and robotics.</p>
@@ -246,7 +236,7 @@
     <p>We aim to become a national platform where young minds unite to develop next-gen systems in UAVs, autonomous vehicles, cyber-defense and robotics.</p>
   </section>
 
-  <!-- Media Section -->
+  <!-- Media -->
   <section id="media">
     <h2>Media & Gallery</h2>
     <div class="video-container">
@@ -259,7 +249,7 @@
     </div>
   </section>
 
-  <!-- Join Section -->
+  <!-- Join -->
   <section id="join">
     <h2>Join the Movement</h2>
     <p>We're open to both passionate individuals and investors looking to support India's innovation in defense & robotics.</p>
@@ -269,7 +259,7 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
+  <!-- Contact -->
   <section id="contact">
     <h2>Contact & Social Media</h2>
     <p>Email: <a href="mailto:idrofoundation@gmail.com">idrofoundation@gmail.com</a></p>
@@ -285,10 +275,13 @@
     © 2025 IDRO – Research and Innovation Foundation. Made with 💙 for Bharat 🇮🇳. Contribute to India. Inspire Innovation.
   </footer>
 
-  <!-- Script for Celebration -->
-  <script>
+  <!-- Celebration Scripts -->
+  <script type="module">
+    import { Fireworks } from "https://cdn.jsdelivr.net/npm/fireworks-js@2.1.1/dist/fireworks.module.js";
+    import confetti from "https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.module.mjs";
+
     const container = document.getElementById('fireworks-canvas');
-    const fireworks = new Fireworks.default(container, {
+    const fireworks = new Fireworks(container, {
       autoresize: true,
       opacity: 0.5,
       acceleration: 1.05,
@@ -312,5 +305,6 @@
       }, 2000);
     };
   </script>
+
 </body>
 </html>
