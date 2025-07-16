@@ -18,8 +18,15 @@
     gtag('config', 'G-9BCN2KMNVV');
   </script>
 
+  <!-- Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Fireworks & Confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.1.1/dist/index.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <!-- Styles -->
   <style>
     * { margin: 0; padding: 0; scroll-behavior: smooth; }
     body {
@@ -149,9 +156,52 @@
       color: #00ffff;
       text-decoration: none;
     }
+    /* Popup Modal */
+    #popup {
+      position: fixed;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: white;
+      color: black;
+      padding: 20px 30px;
+      border-radius: 10px;
+      z-index: 10000;
+      display: none;
+      box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
+      text-align: center;
+    }
+    #popup h2 {
+      margin-bottom: 0.5rem;
+    }
+    #popup button {
+      margin-top: 1rem;
+      padding: 10px 20px;
+      background: #00ffff;
+      color: #000;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    canvas#fireworks-canvas {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      pointer-events: none;
+      z-index: 9999;
+    }
   </style>
 </head>
 <body>
+
+  <!-- Fireworks & Popup -->
+  <canvas id="fireworks-canvas"></canvas>
+  <div id="popup">
+    <h2>🎉 Welcome to IDRO 🎉</h2>
+    <p>Igniting Innovation. Powering Bharat. 💡🇮🇳</p>
+    <button onclick="document.getElementById('popup').style.display='none';">Enter</button>
+  </div>
 
   <!-- Banner -->
   <div style="margin: 0 auto; max-width: 100%; padding: 1rem 2rem;">
@@ -234,5 +284,33 @@
   <footer class="footer">
     © 2025 IDRO – Research and Innovation Foundation. Made with 💙 for Bharat 🇮🇳. Contribute to India. Inspire Innovation.
   </footer>
+
+  <!-- Script for Celebration -->
+  <script>
+    const container = document.getElementById('fireworks-canvas');
+    const fireworks = new Fireworks.default(container, {
+      autoresize: true,
+      opacity: 0.5,
+      acceleration: 1.05,
+      friction: 0.97,
+      gravity: 1.5,
+      particles: 50,
+      trace: 3,
+      explosion: 5
+    });
+    fireworks.start();
+    setTimeout(() => fireworks.stop(), 10000);
+
+    window.onload = function () {
+      setTimeout(() => {
+        document.getElementById('popup').style.display = 'block';
+        confetti({
+          particleCount: 150,
+          spread: 100,
+          origin: { y: 0.6 }
+        });
+      }, 2000);
+    };
+  </script>
 </body>
 </html>
