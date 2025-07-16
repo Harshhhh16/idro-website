@@ -173,15 +173,92 @@
 </head>
 <body>
 
-  <!-- Your existing content... -->
+  <!-- Banner -->
+  <div style="margin: 0 auto; max-width: 100%; padding: 1rem 2rem;">
+    <img src="images/BANNER Linkdin.png" alt="IDRO Banner" style="width: 100%; max-height: 300px; object-fit: cover; border-radius: 10px; border: 2px solid #00ffff;">
+  </div>
 
-  <!-- Launch Countdown -->
+  <!-- Header -->
+  <header>
+    <div class="logo-container">IDRO</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#vision">Vision</a>
+      <a href="#join">Join</a>
+      <a href="#media">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Tagline -->
+  <div class="tagline">
+    <h1 style="font-family: 'Orbitron', sans-serif; font-size: 2.5rem; color: #00ffff; margin-bottom: 10px;">Indian Defense & Robotics Organization</h1>
+    <p style="font-family: 'Georgia', serif; font-size: 1.4rem; color: #ffcc00;">युवशक्तिः विज्ञानाय, विज्ञानं भारतरक्षणाय।</p>
+    <p style="font-style: italic; color: #ccc;">Youth power for science, and science for the protection of India.</p>
+  </div>
+
+  <!-- Home -->
+  <section id="home">
+    <h2>Welcome to IDRO</h2>
+    <p>We are building India's future in defense and robotics by empowering students, uniting innovators, and developing world-class indigenous technologies. Our mission is to contribute to Bharat's self-reliance through innovation, collaboration, and youth-led research and development.</p>
+  </section>
+
+  <!-- Vision -->
+  <section id="vision">
+    <h2>Our Vision</h2>
+    <p>To build a self-reliant, secure, and technologically sovereign India by empowering students and innovators to lead the future of defense and robotics.</p>
+    <p>Inspired by the legacy of Dr. A.P.J. Abdul Kalam, IDRO believes in dreaming big, building bold and defending with pride.</p>
+    <p>We envision a future where India's defense capabilities are driven by indigenous technology, student innovation and collaborative research.</p>
+    <p>We aim to become a national platform where young minds unite to develop next-gen systems in UAVs, autonomous vehicles, cyber-defense and robotics.</p>
+  </section>
+
+  <!-- Media -->
+  <section id="media">
+    <h2>Media & Gallery</h2>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/ASmaIBPFItg" title="Flag Hoisting Drone - IDRO" allowfullscreen></iframe>
+    </div>
+    <div class="gallery-container">
+      <img src="images/flaghoisting.JPG" class="gallery-img" alt="Project Image 1">
+      <img src="images/kalam.jpg.png" class="gallery-img" alt="Project Image 2">
+      <img src="images/drone.JPG" class="gallery-img" alt="Project Image 3">
+    </div>
+  </section>
+
+  <!-- Join -->
+  <section id="join">
+    <h2>Join the Movement</h2>
+    <p>We're open to both passionate individuals and investors looking to support India's innovation in defense & robotics.</p>
+    <div class="button-group">
+      <a href="https://forms.gle/bkAc29nS9jFuPnky7" target="_blank"><button class="cta-button">👨‍💻 Join as Team Member</button></a>
+      <a href="mailto:idrofoundation@gmail.com?subject=Investor Inquiry - IDRO" target="_blank"><button class="cta-button">💰 Join as Investor / Partner</button></a>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact & Social Media</h2>
+    <p>Email: <a href="mailto:idrofoundation@gmail.com">idrofoundation@gmail.com</a></p>
+    <div class="social-icons">
+      <a href="http://linkedin.com/company/idrofoundation" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.instagram.com/idro.foundation/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://forms.gle/JLt8C1XGz7n4LfQs9" target="_blank"><i class="fas fa-comments"></i></a>
+    </div>
+  </section>
+
+  <!-- Countdown -->
   <section id="launch-countdown" style="text-align: center; padding: 4rem 2rem;">
     <h2 style="color: #00ffff; font-size: 2rem; animation: fadeInUp 1s ease-in-out;">🚀 New Project Launch</h2>
     <h3 style="color: #ffcc00; font-size: 1.5rem; animation: fadeInUp 1.2s ease-in-out;">Coming This Independence Day 🇮🇳 – 15th August 2025</h3>
     <div id="timer"></div>
   </section>
 
+  <!-- Footer -->
+  <footer class="footer">
+    © 2025 IDRO – Research and Innovation Foundation. Made with 💙 for Bharat 🇮🇳. Contribute to India. Inspire Innovation.
+  </footer>
+
+  <!-- Countdown Script -->
   <script>
     const launchDate = new Date("August 15, 2025 00:00:00").getTime();
     const timerElement = document.getElementById("timer");
