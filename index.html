@@ -30,9 +30,6 @@
       background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
       color: white;
     }
-    header, .logo-container, nav a:hover, .cta-button:hover, .gallery-img:hover, #popup.show, #popup button:hover {
-      transition: all 0.3s ease-in-out;
-    }
     header {
       display: flex;
       justify-content: space-between;
@@ -56,15 +53,17 @@
       text-decoration: none;
       color: #fff;
       font-weight: 500;
+      transition: color 0.3s;
     }
     nav a:hover {
       color: #00ffff;
     }
     .tagline {
       text-align: center;
+      font-size: 1.2rem;
+      margin-top: 0.4rem;
       font-style: italic;
       color: #ccc;
-      margin-top: 0.4rem;
     }
     section {
       padding: 4rem 2rem;
@@ -78,8 +77,9 @@
     section p {
       font-size: 1.2rem;
       line-height: 1.8rem;
+      margin-bottom: 1rem;
     }
-    .video-container, .gallery-container, .button-group, .social-icons {
+    .video-container, .gallery-container {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
@@ -97,8 +97,20 @@
       width: 300px;
       height: 200px;
       object-fit: cover;
+      object-position: center;
       border-radius: 10px;
       border: 2px solid #00ffff;
+      transition: transform 0.3s ease-in-out;
+    }
+    .gallery-img:hover {
+      transform: scale(1.05);
+    }
+    .button-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 2rem;
     }
     .cta-button {
       padding: 0.75rem 1.5rem;
@@ -109,10 +121,22 @@
       border-radius: 30px;
       cursor: pointer;
       font-size: 1rem;
+      transition: 0.3s ease-in-out;
+    }
+    .cta-button:hover {
+      background-color: #00cccc;
+      transform: scale(1.05);
+    }
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+      font-size: 1.5rem;
     }
     .social-icons a {
-      font-size: 1.5rem;
       color: #fff;
+      transition: color 0.3s;
     }
     .social-icons a:hover {
       color: #00ffff;
@@ -126,60 +150,61 @@
     }
     .footer a {
       color: #00ffff;
+      text-decoration: none;
     }
-    #launch-countdown {
+    #timer {
+      font-size: 2.5rem;
+      color: #ffffff;
+      font-weight: bold;
+      letter-spacing: 2px;
       animation: fadeInUp 1.4s ease-in-out;
     }
-    #timer span {
-      display: inline-block;
-      min-width: 80px;
-      padding: 10px;
-      background: rgba(255,255,255,0.1);
-      border-radius: 10px;
-      margin: 5px;
-      font-size: 2rem;
-    }
     @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
 <body>
 
-  <section id="launch-countdown">
-    <h2 style="color: #00ffff; font-size: 2rem;">🚀 New Project Launch</h2>
-    <h3 style="color: #ffcc00; font-size: 1.5rem;">Coming This Independence Day 🇮🇳 – 15th August 2025</h3>
+  <!-- Your existing content... -->
+
+  <!-- Launch Countdown -->
+  <section id="launch-countdown" style="text-align: center; padding: 4rem 2rem;">
+    <h2 style="color: #00ffff; font-size: 2rem; animation: fadeInUp 1s ease-in-out;">🚀 New Project Launch</h2>
+    <h3 style="color: #ffcc00; font-size: 1.5rem; animation: fadeInUp 1.2s ease-in-out;">Coming This Independence Day 🇮🇳 – 15th August 2025</h3>
     <div id="timer"></div>
   </section>
 
-  <footer class="footer">
-    © 2025 IDRO – Research and Innovation Foundation. Made with 💙 for Bharat 🇮🇳. Contribute to India. Inspire Innovation.
-  </footer>
-
-  <!-- Countdown Timer Script -->
   <script>
-    function updateCountdown() {
-      const launchDate = new Date("August 15, 2025 00:00:00").getTime();
+    const launchDate = new Date("August 15, 2025 00:00:00").getTime();
+    const timerElement = document.getElementById("timer");
+
+    function updateTimer() {
       const now = new Date().getTime();
       const distance = launchDate - now;
+
+      if (distance < 0) {
+        timerElement.innerHTML = "🎉 Launched!";
+        return;
+      }
 
       const days = Math.floor(distance / (1000 * 60 * 60 * 24));
       const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-      document.getElementById("timer").innerHTML =
-        `<span>${days}d</span> <span>${hours}h</span> <span>${minutes}m</span> <span>${seconds}s</span>`;
-
-      if (distance < 0) {
-        document.getElementById("timer").innerHTML = "🚀 Launched!";
-      }
+      timerElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
     }
 
-    setInterval(updateCountdown, 1000);
-    updateCountdown();
+    updateTimer();
+    setInterval(updateTimer, 1000);
   </script>
-
 </body>
 </html>
