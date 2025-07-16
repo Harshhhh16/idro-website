@@ -152,198 +152,59 @@
       color: #00ffff;
       text-decoration: none;
     }
-
-    /* Fireworks canvas */
-    canvas#fireworks-canvas {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100vw;
-      height: 100vh;
-      pointer-events: none;
-      z-index: 9998;
+    #launch-countdown {
+      animation: fadeInUp 1.4s ease-in-out;
     }
-
-    /* Popup & background blur */
-    body.blur > *:not(#popup):not(canvas) {
-      filter: blur(4px);
-      transition: filter 0.4s ease;
-    }
-    #popup {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%) scale(0.9);
-      background: rgba(255, 255, 255, 0.12);
-      backdrop-filter: blur(12px);
-      border: 2px solid #00ffff;
-      padding: 30px 40px;
-      border-radius: 15px;
-      z-index: 9999;
-      color: #fff;
-      display: none;
-      text-align: center;
-      box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
-      transition: all 0.5s ease;
-    }
-    #popup.show {
-      display: block;
-      transform: translate(-50%, -50%) scale(1);
-    }
-    #popup h2 {
+    #timer span {
+      display: inline-block;
+      min-width: 80px;
+      padding: 10px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 10px;
+      margin: 5px;
       font-size: 2rem;
-      font-family: 'Orbitron', sans-serif;
-      color: #00ffff;
     }
-    #popup p {
-      font-size: 1.1rem;
-      margin: 10px 0;
-    }
-    #popup button {
-      margin-top: 1rem;
-      padding: 10px 25px;
-      background: #00ffff;
-      color: #000;
-      font-weight: bold;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-    #popup button:hover {
-      background: #00cccc;
-      transform: scale(1.05);
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
+  <!-- existing body content here -->
 
-  <!-- Fireworks Canvas & Popup -->
-  <canvas id="fireworks-canvas"></canvas>
-  <div id="popup">
-    <h2>🎉 Welcome to IDRO 🎉</h2>
-    <p>Igniting Innovation. Powering Bharat. 💡🇮🇳</p>
-    <button onclick="closePopup()">Enter</button>
-  </div>
-
-  <!-- Banner -->
-  <div style="margin: 0 auto; max-width: 100%; padding: 1rem 2rem;">
-    <img src="images/BANNER Linkdin.png" alt="IDRO Banner" style="width: 100%; max-height: 300px; object-fit: cover; border-radius: 10px; border: 2px solid #00ffff;">
-  </div>
-
-  <!-- Header -->
-  <header>
-    <div class="logo-container">IDRO</div>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#vision">Vision</a>
-      <a href="#join">Join</a>
-      <a href="#media">Gallery</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-
-  <!-- Tagline -->
-  <div class="tagline">
-    <h1 style="font-family: 'Orbitron', sans-serif; font-size: 2.5rem; color: #00ffff; margin-bottom: 10px;">Indian Defense & Robotics Organization</h1>
-    <p style="font-family: 'Georgia', serif; font-size: 1.4rem; color: #ffcc00;">युवशक्तिः विज्ञानाय, विज्ञानं भारतरक्षणाय।</p>
-    <p style="font-style: italic; color: #ccc;">Youth power for science, and science for the protection of India.</p>
-  </div>
-
-  <!-- Home -->
-  <section id="home">
-    <h2>Welcome to IDRO</h2>
-    <p>We are building India's future in defense and robotics by empowering students, uniting innovators, and developing world-class indigenous technologies. Our mission is to contribute to Bharat's self-reliance through innovation, collaboration, and youth-led research and development.</p>
+  <section id="launch-countdown">
+    <h2 style="color: #00ffff; font-size: 2rem;">🚀 New Project Launch</h2>
+    <h3 style="color: #ffcc00; font-size: 1.5rem;">Coming This Independence Day 🇮🇳 – 15th August 2025</h3>
+    <div id="timer"></div>
   </section>
 
-  <!-- Vision -->
-  <section id="vision">
-    <h2>Our Vision</h2>
-    <p>To build a self-reliant, secure, and technologically sovereign India by empowering students and innovators to lead the future of defense and robotics.</p>
-    <p>Inspired by the legacy of Dr. A.P.J. Abdul Kalam, IDRO believes in dreaming big, building bold and defending with pride.</p>
-    <p>We envision a future where India's defense capabilities are driven by indigenous technology, student innovation and collaborative research.</p>
-    <p>We aim to become a national platform where young minds unite to develop next-gen systems in UAVs, autonomous vehicles, cyber-defense and robotics.</p>
-  </section>
-
-  <!-- Media -->
-  <section id="media">
-    <h2>Media & Gallery</h2>
-    <div class="video-container">
-      <iframe src="https://www.youtube.com/embed/ASmaIBPFItg" title="Flag Hoisting Drone - IDRO" allowfullscreen></iframe>
-    </div>
-    <div class="gallery-container">
-      <img src="images/flaghoisting.JPG" class="gallery-img" alt="Project Image 1">
-      <img src="images/kalam.jpg.png" class="gallery-img" alt="Project Image 2">
-      <img src="images/drone.JPG" class="gallery-img" alt="Project Image 3">
-    </div>
-  </section>
-
-  <!-- Join -->
-  <section id="join">
-    <h2>Join the Movement</h2>
-    <p>We're open to both passionate individuals and investors looking to support India's innovation in defense & robotics.</p>
-    <div class="button-group">
-      <a href="https://forms.gle/bkAc29nS9jFuPnky7" target="_blank"><button class="cta-button">👨‍💻 Join as Team Member</button></a>
-      <a href="mailto:idrofoundation@gmail.com?subject=Investor Inquiry - IDRO" target="_blank"><button class="cta-button">💰 Join as Investor / Partner</button></a>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact">
-    <h2>Contact & Social Media</h2>
-    <p>Email: <a href="mailto:idrofoundation@gmail.com">idrofoundation@gmail.com</a></p>
-    <div class="social-icons">
-      <a href="http://linkedin.com/company/idrofoundation" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="https://www.instagram.com/idro.foundation/" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://forms.gle/JLt8C1XGz7n4LfQs9" target="_blank"><i class="fas fa-comments"></i></a>
-    </div>
-  </section>
-
-  <!-- Footer -->
   <footer class="footer">
     © 2025 IDRO – Research and Innovation Foundation. Made with 💙 for Bharat 🇮🇳. Contribute to India. Inspire Innovation.
   </footer>
 
-  <!-- Celebration Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.1.1/dist/index.umd.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <!-- Countdown Timer Script -->
   <script>
-    function closePopup() {
-      document.getElementById('popup').classList.remove('show');
-      document.body.classList.remove('blur');
-    }
+    function updateCountdown() {
+      const launchDate = new Date("August 15, 2025 00:00:00").getTime();
+      const now = new Date().getTime();
+      const distance = launchDate - now;
 
-    function hasSeenToday() {
-      const today = new Date().toDateString();
-      return localStorage.getItem('idro-popup-date') === today;
-    }
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    function setSeenToday() {
-      const today = new Date().toDateString();
-      localStorage.setItem('idro-popup-date', today);
-    }
+      document.getElementById("timer").innerHTML =
+        `<span>${days}d</span> <span>${hours}h</span> <span>${minutes}m</span> <span>${seconds}s</span>`;
 
-    window.onload = function () {
-      if (!hasSeenToday()) {
-        setTimeout(() => {
-          document.getElementById('popup').classList.add('show');
-          document.body.classList.add('blur');
-          const fireworks = new Fireworks.default(document.getElementById('fireworks-canvas'), {
-            autoresize: true,
-            opacity: 0.5,
-            acceleration: 1.05,
-            friction: 0.97,
-            gravity: 1.5,
-            particles: 50,
-            trace: 3,
-            explosion: 5
-          });
-          fireworks.start();
-          setTimeout(() => fireworks.stop(), 10000);
-          confetti({ particleCount: 150, spread: 100, origin: { y: 0.6 } });
-          setSeenToday();
-        }, 1000);
+      if (distance < 0) {
+        document.getElementById("timer").innerHTML = "🚀 Launched!";
       }
-    };
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
   </script>
 </body>
 </html>
