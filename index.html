@@ -153,37 +153,65 @@
       text-decoration: none;
     }
 
-    /* Popup Modal */
+    /* Fireworks canvas */
+    canvas#fireworks-canvas {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 9998;
+    }
+
+    /* Popup & background blur */
+    body.blur > *:not(#popup):not(canvas) {
+      filter: blur(4px);
+      transition: filter 0.4s ease;
+    }
     #popup {
       position: fixed;
-      top: 30%;
+      top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%);
-      background: white;
-      color: black;
-      padding: 20px 30px;
-      border-radius: 10px;
-      z-index: 10000;
+      transform: translate(-50%, -50%) scale(0.9);
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(12px);
+      border: 2px solid #00ffff;
+      padding: 30px 40px;
+      border-radius: 15px;
+      z-index: 9999;
+      color: #fff;
       display: none;
-      box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
       text-align: center;
+      box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
+      transition: all 0.5s ease;
+    }
+    #popup.show {
+      display: block;
+      transform: translate(-50%, -50%) scale(1);
+    }
+    #popup h2 {
+      font-size: 2rem;
+      font-family: 'Orbitron', sans-serif;
+      color: #00ffff;
+    }
+    #popup p {
+      font-size: 1.1rem;
+      margin: 10px 0;
     }
     #popup button {
       margin-top: 1rem;
-      padding: 10px 20px;
+      padding: 10px 25px;
       background: #00ffff;
       color: #000;
       font-weight: bold;
       border: none;
-      border-radius: 5px;
+      border-radius: 30px;
       cursor: pointer;
+      transition: all 0.3s ease;
     }
-    canvas#fireworks-canvas {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100vw; height: 100vh;
-      pointer-events: none;
-      z-index: 9999;
+    #popup button:hover {
+      background: #00cccc;
+      transform: scale(1.05);
     }
   </style>
 </head>
@@ -194,7 +222,7 @@
   <div id="popup">
     <h2>🎉 Welcome to IDRO 🎉</h2>
     <p>Igniting Innovation. Powering Bharat. 💡🇮🇳</p>
-    <button onclick="document.getElementById('popup').style.display='none';">Enter</button>
+    <button onclick="closePopup()">Enter</button>
   </div>
 
   <!-- Banner -->
@@ -276,40 +304,46 @@
   </footer>
 
   <!-- Celebration Scripts -->
-  <!-- Celebration Scripts (Non-module) -->
-<script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.1.1/dist/index.umd.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-<script>
-  window.onload = function () {
-    // Show popup after 2 sec
-    setTimeout(() => {
-      document.getElementById('popup').style.display = 'block';
-      confetti({
-        particleCount: 150,
-        spread: 100,
-        origin: { y: 0.6 }
-      });
-    }, 2000);
+  <script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.1.1/dist/index.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script>
+    function closePopup() {
+      document.getElementById('popup').classList.remove('show');
+      document.body.classList.remove('blur');
+    }
 
-    // Start fireworks
-    const container = document.getElementById('fireworks-canvas');
-    const fireworks = new Fireworks.default(container, {
-      autoresize: true,
-      opacity: 0.5,
-      acceleration: 1.05,
-      friction: 0.97,
-      gravity: 1.5,
-      particles: 50,
-      trace: 3,
-      explosion: 5
-    });
-    fireworks.start();
+    function hasSeenToday() {
+      const today = new Date().toDateString();
+      return localStorage.getItem('idro-popup-date') === today;
+    }
 
-    // Stop after 10 seconds
-    setTimeout(() => fireworks.stop(), 10000);
-  };
-</script>
+    function setSeenToday() {
+      const today = new Date().toDateString();
+      localStorage.setItem('idro-popup-date', today);
+    }
 
-
+    window.onload = function () {
+      if (!hasSeenToday()) {
+        setTimeout(() => {
+          document.getElementById('popup').classList.add('show');
+          document.body.classList.add('blur');
+          const fireworks = new Fireworks.default(document.getElementById('fireworks-canvas'), {
+            autoresize: true,
+            opacity: 0.5,
+            acceleration: 1.05,
+            friction: 0.97,
+            gravity: 1.5,
+            particles: 50,
+            trace: 3,
+            explosion: 5
+          });
+          fireworks.start();
+          setTimeout(() => fireworks.stop(), 10000);
+          confetti({ particleCount: 150, spread: 100, origin: { y: 0.6 } });
+          setSeenToday();
+        }, 2000);
+      }
+    };
+  </script>
 </body>
 </html>
