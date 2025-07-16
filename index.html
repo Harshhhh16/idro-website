@@ -172,6 +172,16 @@
   </style>
 </head>
 <body>
+  <!-- Celebration Script -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script>
+    window.addEventListener('load', function () {
+      const launchDate = new Date("August 15, 2025 00:00:00").getTime();
+      const now = new Date().getTime();
+      if (now < launchDate) return;
+      confetti({ particleCount: 250, spread: 100, origin: { y: 0.6 } });
+    });
+  </script>
 
   <!-- Banner -->
   <div style="margin: 0 auto; max-width: 100%; padding: 1rem 2rem;">
@@ -225,15 +235,13 @@
     </div>
   </section>
 
-
-   <!-- Countdown -->
-  <section id="launch-countdown" style="text-align: center; padding: 4rem 2rem;">
+  <!-- Countdown -->
+  <section id="launch-countdown">
     <h2 style="color: #00ffff; font-size: 2rem; animation: fadeInUp 1s ease-in-out;">🚀 New Project Launch</h2>
     <h3 style="color: #ffcc00; font-size: 1.5rem; animation: fadeInUp 1.2s ease-in-out;">Coming This Independence Day 🇮🇳 – 15th August 2025</h3>
     <div id="timer"></div>
   </section>
 
-  
   <!-- Join -->
   <section id="join">
     <h2>Join the Movement</h2>
@@ -254,8 +262,6 @@
       <a href="https://forms.gle/JLt8C1XGz7n4LfQs9" target="_blank"><i class="fas fa-comments"></i></a>
     </div>
   </section>
-
- 
 
   <!-- Footer -->
   <footer class="footer">
