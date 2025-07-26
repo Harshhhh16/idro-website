@@ -381,12 +381,12 @@
     const today = new Date().toISOString().split('T')[0];
     const specialDays = ['2025-07-26', '2025-07-27', '2025-08-15'];
     if (specialDays.includes(today)) {
-      launchThreeFireworks();
+      setTimeout(() => {
+        launchThreeFireworks();
+      }, 1000); // 1 second delay
     }
   });
 </script>
-
-
 
 
 </body>
