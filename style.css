@@ -9,10 +9,11 @@
     <meta property="og:description" content="A student-led national initiative building India's defense & robotics future." />
     <meta property="og:image" content="https://idrofoundation.netlify.app/images/BANNER%20Linkdin.png" />
     <meta property="og:url" content="https://idrofoundation.netlify.app/" />
+    <meta property="og:type" content="website" />
     <meta name="theme-color" content="#00204A" /> <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800&family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link rel="icon" type="image/png" href="/images/favicon.png"> <style>
+    <style>
         /* Base Styles & Reset */
         * {
             margin: 0;
@@ -29,6 +30,8 @@
             background-color: #F0F2F5; /* Light grey background for professionalism */
             color: #333333;
             line-height: 1.7;
+            -webkit-font-smoothing: antialiased; /* Smoother font rendering */
+            -moz-osx-font-smoothing: grayscale;
         }
 
         a {
@@ -68,6 +71,7 @@
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap; /* Allow wrapping on smaller screens */
+            gap: 20px; /* Space between logo and nav on wrap */
         }
 
         .logo {
@@ -132,7 +136,8 @@
 
         /* Hero Section (Main Visual + Tagline) */
         .hero {
-            background: linear-gradient(rgba(0, 32, 74, 0.85), rgba(0, 51, 102, 0.85)), url('images/hero-bg.jpg') no-repeat center center/cover; /* Blend with background image */
+            /* Replace 'images/hero-bg.jpg' with an actual impactful image */
+            background: linear-gradient(rgba(0, 32, 74, 0.85), rgba(0, 51, 102, 0.85)), url('images/hero-bg.jpg') no-repeat center center/cover;
             color: white;
             padding: 120px 25px;
             text-align: center;
@@ -141,7 +146,7 @@
             border-bottom: 5px solid #FFAA00; /* Stronger national accent */
         }
 
-        .hero::before { /* Subtle pattern overlay */
+        .hero::before { /* Subtle pattern overlay for tech feel */
             content: '';
             position: absolute;
             top: 0;
@@ -197,7 +202,7 @@
         }
 
         .section.alt {
-            background-color: #EBF2F7; /* Lighter blue-gray */
+            background-color: #EBF2F7; /* Lighter blue-gray for alternating sections */
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
         }
 
@@ -211,7 +216,7 @@
             padding-bottom: 15px;
         }
 
-        .section h2::after {
+        .section h2::after { /* Underline effect for headings */
             content: '';
             display: block;
             width: 80px;
@@ -229,7 +234,7 @@
 
         /* Specific Section Enhancements */
         #about p strong {
-            color: #D9534F; /* Alert red */
+            color: #D9534F; /* Alert red for important notes */
             font-weight: 700;
         }
 
@@ -273,7 +278,6 @@
             font-size: 1rem;
             color: #E0E0E0;
         }
-
 
         /* Media & Gallery */
         #media .video-container {
@@ -705,9 +709,7 @@
         const countdownInterval = setInterval(updateTimer, 1000);
         updateTimer(); // Initial call to display immediately
 
-        // Confetti Celebration for July 27
-        // Current time is Saturday, July 26, 2025 at 11:12:32 AM IST.
-        // So, this will trigger the confetti if the page is loaded on July 25, 26, 27, or 28, 2025.
+        // Confetti Celebration for July 27 (Based on your original code's logic)
         const today = new Date();
         const celebrationMonth = 6; // July is month 6 (0-indexed)
         const celebrationStartDay = 25;
@@ -718,20 +720,19 @@
                 confetti({
                     particleCount: 250,
                     spread: 120,
-                    // Use a slightly different origin for a more dynamic effect
-                    origin: { x: Math.random(), y: Math.random() * 0.7 - 0.2 }
+                    origin: { x: Math.random(), y: Math.random() * 0.7 - 0.2 } // Random origin for dynamic effect
                 });
             }, 1500); // 1.5 second delay after load
             console.log("Confetti activated for celebration period!");
         }
 
-        // Active Navigation Link Highlight
+        // Active Navigation Link Highlight based on scroll position
         document.addEventListener('DOMContentLoaded', () => {
             const sections = document.querySelectorAll('main section');
             const navLinks = document.querySelectorAll('nav a');
 
             const options = {
-                threshold: 0.5 // Adjust as needed, 0.5 means 50% of the section is visible
+                threshold: 0.5 // Adjust as needed, means 50% of the section is visible to be 'active'
             };
 
             const observer = new IntersectionObserver((entries) => {
@@ -741,8 +742,10 @@
 
                     if (correspondingLink) {
                         if (entry.isIntersecting) {
-                            navLinks.forEach(link => link.classList.remove('active'));
-                            correspondingLink.classList.add('active');
+                            navLinks.forEach(link => link.classList.remove('active')); // Remove from all
+                            correspondingLink.classList.add('active'); // Add to current
+                        } else {
+                            correspondingLink.classList.remove('active'); // Remove if scrolled out
                         }
                     }
                 });
@@ -751,6 +754,16 @@
             sections.forEach(section => {
                 observer.observe(section);
             });
+
+            // Handle active state for the "Home" link when at the very top of the page
+            window.addEventListener('scroll', () => {
+                if (window.scrollY < 100) { // Small buffer for top of page
+                    navLinks.forEach(link => link.classList.remove('active'));
+                    document.querySelector('nav a[href="#home"]').classList.add('active');
+                }
+            });
+            // Initial check for home link
+            document.querySelector('nav a[href="#home"]').classList.add('active');
         });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
