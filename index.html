@@ -348,23 +348,40 @@
   </script>
 
 
-  <script>
+<script>
+function fireworkBurst(x, y) {
+  confetti({
+    particleCount: 100,
+    spread: 70,
+    origin: { x: x, y: y },
+    colors: ['#ff0043', '#00ffff', '#ffffff', '#ffcc00']
+  });
+}
+
+function launchFireworks() {
+  const interval = setInterval(() => {
+    const x = Math.random();
+    const y = Math.random() * 0.5;
+    fireworkBurst(x, y);
+  }, 600);
+
+  // Stop fireworks after 6 seconds
+  setTimeout(() => {
+    clearInterval(interval);
+  }, 6000);
+}
+
+// 🎆 Launch fireworks on special days
 window.addEventListener('load', function () {
-  const today = new Date();
-  const currentDate = today.toISOString().split("T")[0]; // Format: YYYY-MM-DD
+  const today = new Date().toISOString().split("T")[0];
+  const fireworkDays = ["2025-07-26", "2025-07-27", "2025-08-15"];
 
-  // 🎉 Celebration active on these dates
-  const celebrationDays = ["2025-07-26", "2025-07-27", "2025-07-28", "2025-07-29"];
-
-  if (celebrationDays.includes(currentDate)) {
-    confetti({
-      particleCount: 250,
-      spread: 100,
-      origin: { y: 0.6 }
-    });
+  if (fireworkDays.includes(today)) {
+    launchFireworks();
   }
 });
 </script>
+
 
 </body>
 </html>
