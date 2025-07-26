@@ -359,7 +359,7 @@
       startVelocity: 45,
       gravity: 0.8,
       ticks: 200,
-      origin: { x: 0.7, y: 0.7 },
+      origin: { x: 0.5, y: 0.5 },
       colors: ['#ffcc00', '#00ffff', '#ffffff', '#ff0043'],
       shapes: ['circle', 'square', 'star'],
       scalar: 1.2,
@@ -368,7 +368,7 @@
     });
   }
 
-  function launchFireworks(duration = 8000, intervalMs = 800) {
+  function launchFireworks(duration = 5000, intervalMs = 400) {
     const end = Date.now() + duration;
     const loop = setInterval(() => {
       fireworkPulse();
