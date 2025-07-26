@@ -1,771 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>IDRO – Indian Defense & Robotics Organization</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IDRO – Indian Defense & Robotics Organization</title>
 
-    <meta property="og:title" content="IDRO – Indian Defense & Robotics Organization" />
-    <meta property="og:description" content="A student-led national initiative building India's defense & robotics future." />
-    <meta property="og:image" content="https://idrofoundation.netlify.app/images/BANNER%20Linkdin.png" />
-    <meta property="og:url" content="https://idrofoundation.netlify.app/" />
-    <meta property="og:type" content="website" />
-    <meta name="theme-color" content="#00204A" /> <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800&family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Open Graph Meta for Social Sharing -->
+  <meta property="og:title" content="IDRO – Indian Defense & Robotics Organization" />
+  <meta property="og:description" content="A student-led national initiative building India's defense & robotics future." />
+  <meta property="og:image" content="https://idrofoundation.netlify.app/images/BANNER%20Linkdin.png" />
+  <meta property="og:url" content="https://idrofoundation.netlify.app/" />
+  <meta name="theme-color" content="#0d1b2a" />
 
-    <style>
-        /* Base Styles & Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+  
+  <!-- Styles (optional if you have external CSS) -->
+  <style>
+   <body>
+  <header>
+    <h1>IDRO</h1>
+    <p>Indian Defense & Robotics Organization</p>
+  </header>
 
-        html {
-            scroll-behavior: smooth; /* Smooth scrolling for anchor links */
-        }
-
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #F0F2F5; /* Light grey background for professionalism */
-            color: #333333;
-            line-height: 1.7;
-            -webkit-font-smoothing: antialiased; /* Smoother font rendering */
-            -moz-osx-font-smoothing: grayscale;
-        }
-
-        a {
-            text-decoration: none;
-            color: #007bff; /* Standard link blue */
-            transition: color 0.3s ease;
-        }
-
-        a:hover {
-            color: #0056b3;
-        }
-
-        /* Utility Classes */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 25px;
-        }
-
-        .text-center {
-            text-align: center;
-        }
-
-        /* Header & Navigation */
-        header {
-            background-color: #00204A; /* Very deep blue */
-            color: white;
-            padding: 15px 0;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            position: sticky;
-            top: 0;
-            z-index: 2000; /* Ensure header stays on top */
-        }
-
-        .topbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap; /* Allow wrapping on smaller screens */
-            gap: 20px; /* Space between logo and nav on wrap */
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .logo img {
-            height: 70px; /* Larger logo */
-            width: 70px;
-            object-fit: contain;
-            /* Consider a shield or geometric shape for the logo background */
-        }
-
-        .logo-text {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #00FFFF; /* Bright Cyan for prominence */
-            letter-spacing: 2px;
-            text-shadow: 1px 1px 5px rgba(0, 255, 255, 0.5); /* Subtle glow */
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 35px; /* More spacing between nav items */
-            flex-wrap: wrap;
-            justify-content: center; /* Center nav items when wrapped */
-        }
-
-        nav a {
-            color: white;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 600;
-            font-size: 1.05rem;
-            padding: 10px 0;
-            position: relative;
-            transition: color 0.3s ease;
-        }
-
-        nav a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 3px;
-            background-color: #00FFFF;
-            bottom: -5px;
-            left: 0;
-            transition: width 0.3s ease-in-out;
-        }
-
-        nav a:hover {
-            color: #00FFFF;
-        }
-
-        nav a:hover::after,
-        nav a.active::after { /* Active state for current section */
-            width: 100%;
-        }
-
-        /* Hero Section (Main Visual + Tagline) */
-        .hero {
-            /* Replace 'images/hero-bg.jpg' with an actual impactful image */
-            background: linear-gradient(rgba(0, 32, 74, 0.85), rgba(0, 51, 102, 0.85)), url('images/hero-bg.jpg') no-repeat center center/cover;
-            color: white;
-            padding: 120px 25px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            border-bottom: 5px solid #FFAA00; /* Stronger national accent */
-        }
-
-        .hero::before { /* Subtle pattern overlay for tech feel */
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle at top left, rgba(255,255,255,0.05) 1%, transparent 30%),
-                        radial-gradient(circle at bottom right, rgba(255,255,255,0.05) 1%, transparent 30%);
-            z-index: 1;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .hero h1 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 4.2rem;
-            font-weight: 800;
-            background: linear-gradient(to right, #00FFFF, #FFFFFF, #00FFFF);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 20px;
-            text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
-        }
-
-        .hero p {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.7rem;
-            color: #FFDA44; /* Golden yellow */
-            margin-bottom: 15px;
-        }
-
-        .hero .sanskrit-meaning {
-            font-style: italic;
-            font-size: 1.3rem;
-            color: #CCCCCC;
-            margin-top: 5px;
-        }
-
-        /* Section Styling */
-        .section {
-            padding: 80px 0;
-            margin-bottom: 20px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .section.alt {
-            background-color: #EBF2F7; /* Lighter blue-gray for alternating sections */
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-        }
-
-        .section h2 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 2.8rem;
-            color: #00204A;
-            margin-bottom: 35px;
-            text-align: center;
-            position: relative;
-            padding-bottom: 15px;
-        }
-
-        .section h2::after { /* Underline effect for headings */
-            content: '';
-            display: block;
-            width: 80px;
-            height: 5px;
-            background-color: #00FFFF;
-            margin: 15px auto 0;
-            border-radius: 3px;
-        }
-
-        .section p {
-            font-size: 1.15rem;
-            color: #444444;
-            margin-bottom: 20px;
-        }
-
-        /* Specific Section Enhancements */
-        #about p strong {
-            color: #D9534F; /* Alert red for important notes */
-            font-weight: 700;
-        }
-
-        /* Vision Section Icons/Highlights */
-        #vision ul {
-            list-style: none;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 40px;
-            margin-top: 30px;
-            padding: 0;
-        }
-        #vision li {
-            background-color: #003366;
-            color: white;
-            padding: 25px;
-            border-radius: 8px;
-            text-align: center;
-            flex: 1 1 280px; /* Flexible width for cards */
-            max-width: 32%; /* Approx 3 per row */
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease, background-color 0.3s ease;
-        }
-        #vision li:hover {
-            transform: translateY(-8px);
-            background-color: #004a80;
-        }
-        #vision li i {
-            font-size: 3.5rem;
-            color: #00FFFF;
-            margin-bottom: 15px;
-        }
-        #vision li h3 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.6rem;
-            margin-bottom: 10px;
-            color: #FFDA44;
-        }
-        #vision li p {
-            font-size: 1rem;
-            color: #E0E0E0;
-        }
-
-        /* Media & Gallery */
-        #media .video-container {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-            height: 0;
-            overflow: hidden;
-            margin-bottom: 40px;
-            background-color: #000;
-            border-radius: 10px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        #media .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
-        .gallery-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .gallery-img {
-            width: 100%;
-            height: 280px;
-            object-fit: cover;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer;
-        }
-
-        .gallery-img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
-        }
-
-        /* Countdown */
-        #launch-countdown {
-            text-align: center;
-            background-color: #00204A;
-            color: white;
-            padding: 60px 25px;
-            border-radius: 10px;
-            margin-top: 30px;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
-        }
-
-        #launch-countdown h2 {
-            color: #00FFFF;
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
-
-        #launch-countdown h3 {
-            color: #FFDA44;
-            font-size: 2.2rem;
-            margin-bottom: 35px;
-        }
-
-        #timer {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 4.5rem;
-            font-weight: bold;
-            color: #FFFFFF;
-            letter-spacing: 4px;
-            text-shadow: 3px 3px 10px rgba(0, 255, 255, 0.6);
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 10px;
-            display: inline-block;
-        }
-
-        /* Call to Action Buttons */
-        .button-group {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .cta-button {
-            background-color: #FFAA00; /* Orange/Gold accent */
-            color: #00204A; /* Deep blue text */
-            padding: 18px 35px;
-            border: none;
-            border-radius: 50px; /* Pill shape */
-            font-size: 1.25rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .cta-button i {
-            font-size: 1.4rem;
-        }
-
-        .cta-button:hover {
-            background-color: #FFBF00; /* Lighter gold on hover */
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-            color: #000;
-        }
-
-        /* Contact & Social Media */
-        #contact, #feedback {
-            text-align: center;
-        }
-
-        #contact p, #feedback p {
-            font-size: 1.1rem;
-        }
-
-        .social-icons {
-            margin-top: 30px;
-            display: flex;
-            justify-content: center;
-            gap: 35px;
-        }
-
-        .social-icons a {
-            color: #00204A; /* Deep blue for icons */
-            font-size: 3.5rem; /* Larger, more prominent icons */
-            transition: color 0.3s ease, transform 0.2s ease;
-            filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.2));
-        }
-
-        .social-icons a:hover {
-            color: #00FFFF; /* Cyber blue on hover */
-            transform: scale(1.15);
-            filter: drop-shadow(0 0 8px #00FFFF);
-        }
-
-        /* Footer */
-        .footer {
-            background-color: #00204A;
-            color: white;
-            text-align: center;
-            padding: 30px 0;
-            font-size: 0.95rem;
-            border-top: 5px solid #FFAA00; /* Matching national accent */
-            margin-top: 30px;
-        }
-
-        .footer p {
-            margin-bottom: 10px;
-        }
-
-        .footer a {
-            color: #BBBBBB;
-            text-decoration: underline;
-            transition: color 0.3s ease;
-        }
-
-        .footer a:hover {
-            color: #00FFFF;
-        }
-
-        /* Responsive Adjustments */
-        @media (max-width: 992px) {
-            .hero h1 {
-                font-size: 3.5rem;
-            }
-            .hero p {
-                font-size: 1.4rem;
-            }
-            .section h2 {
-                font-size: 2.2rem;
-            }
-            #vision li {
-                max-width: 48%; /* 2 per row */
-            }
-            .gallery-container {
-                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            }
-            #timer {
-                font-size: 3.5rem;
-            }
-            .cta-button {
-                padding: 15px 25px;
-                font-size: 1.1rem;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .topbar {
-                flex-direction: column;
-                gap: 15px;
-            }
-            .logo {
-                margin-bottom: 10px;
-            }
-            nav ul {
-                gap: 20px;
-            }
-            nav a {
-                font-size: 1rem;
-            }
-            .hero {
-                padding: 80px 15px;
-            }
-            .hero h1 {
-                font-size: 2.8rem;
-            }
-            .hero p {
-                font-size: 1.2rem;
-            }
-            .section {
-                padding: 50px 0;
-            }
-            .section h2 {
-                font-size: 2rem;
-            }
-            .section p {
-                font-size: 1rem;
-            }
-            #vision li {
-                max-width: 100%; /* 1 per row */
-            }
-            #timer {
-                font-size: 2.8rem;
-                letter-spacing: 2px;
-            }
-            .button-group {
-                flex-direction: column;
-                gap: 20px;
-            }
-            .cta-button {
-                width: 90%;
-            }
-            .social-icons a {
-                font-size: 3rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .logo-text {
-                font-size: 2rem;
-            }
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-            .hero p {
-                font-size: 1rem;
-            }
-            .hero .sanskrit-meaning {
-                font-size: 1rem;
-            }
-            .section h2 {
-                font-size: 1.8rem;
-            }
-            #timer {
-                font-size: 2rem;
-            }
-            .cta-button {
-                font-size: 1rem;
-                padding: 12px 20px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <div class="container topbar">
-            <div class="logo">
-                <div class="logo-text">IDRO</div>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#vision">Vision</a></li>
-                    <li><a href="#media">Gallery</a></li>
-                    <li><a href="#join">Join</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Indian Defense & Robotics Organization</h1>
-            <p>युवशक्तिः विज्ञानाय, विज्ञानं भारतरक्षणाय।</p>
-            <p class="sanskrit-meaning">Youth power for science, and science for the protection of India.</p>
-        </div>
+  <main>
+    <section id="about">
+      <h2>About</h2>
+      <p>IDRO is a student-led national initiative dedicated to indigenous defense and robotics technology development in India.</p>
     </section>
 
-    <main>
-        <section id="about" class="section container">
-            <h2>About IDRO</h2>
-            <p>IDRO is a pioneering student-led national initiative, passionately dedicated to fostering indigenous defense and robotics technologies across India. Our mission is to harness the immense potential of young minds to contribute directly to national security and technological self-reliance.</p>
-            <p>Established in 2025, we serve as a dynamic platform where students and innovators can collaborate, research, and develop cutting-edge solutions. Our focus areas include advanced Unmanned Aerial Vehicles (UAVs), sophisticated autonomous systems, robust cyber-defense mechanisms, and other critical technologies vital for Bharat's strategic future.</p>
-            <p style="font-size: 1.1rem; color: #D9534F; font-weight: bold; text-align: center; margin-top: 30px;">
-                🔴 Important Note: IDRO is currently a <strong>non-profit and non-registered organization</strong> in its early formation phase. We are diligently working towards formalizing our structure.
-            </p>
-        </section>
+    <section id="vision">
+      <h2>Vision</h2>
+      <p>To empower young innovators in building India's future in defense technology and robotics through collaboration, research, and innovation.</p>
+    </section>
 
-        <section id="vision" class="section alt container">
-            <h2>Our Vision</h2>
-            <p class="text-center">Our overarching vision is to empower the Indian youth to become pivotal architects of self-reliant defense and robotics technologies. We achieve this through a relentless pursuit of collaboration, innovation, and an unwavering commitment to national pride.</p>
-            <p class="text-center">Inspired by the profound legacy and timeless vision of Dr. A.P.J. Abdul Kalam, we are committed to actively transforming India into a formidable global leader in defense technology and robotics, embodying the spirit of scientific excellence for national protection.</p>
-            <ul>
-                <li>
-                    <i class="fas fa-brain"></i>
-                    <h3>Empowering Innovation</h3>
-                    <p>Fostering a culture of creativity and problem-solving among young minds for defense tech.</p>
-                </li>
-                <li>
-                    <i class="fas fa-handshake"></i>
-                    <h3>Strategic Collaboration</h3>
-                    <p>Building strong partnerships with academia, industry, and government for synergistic growth.</p>
-                </li>
-                <li>
-                    <i class="fas fa-flag-checkered"></i>
-                    <h3>National Self-Reliance</h3>
-                    <p>Developing indigenous technologies to strengthen India's defense capabilities and reduce dependency.</p>
-                </li>
-            </ul>
-        </section>
+    <section id="gallery">
+      <h2>Gallery</h2>
+      <p>(Add images or media here)</p>
+    </section>
 
-        <section id="media" class="section container">
-            <h2>Media & Gallery</h2>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=abcdefg" title="Flag Hoisting Drone - IDRO" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
-            <div class="gallery-container">
-                <img src="images/flaghoisting.JPG" class="gallery-img" alt="IDRO Project: Flag Hoisting Drone Demonstration">
-                <img src="images/kalam.jpg.png" class="gallery-img" alt="Inspiration: Dr. A.P.J. Abdul Kalam">
-                <img src="images/drone.JPG" class="gallery-img" alt="IDRO Prototype: Advanced Drone System">
-            </div>
-        </section>
+    <section id="join">
+      <h2>Join Us</h2>
+      <p>(Add form or joining info here)</p>
+    </section>
 
-        <section id="launch-countdown" class="section container">
-            <h2>🚀 New Project Launch Awaits!</h2>
-            <h3>Mark Your Calendars: This Independence Day 🇮🇳 – 15th August 2025</h3>
-            <div id="timer"></div>
-        </section>
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:idro.foundation@gmail.com">idro.foundation@gmail.com</a></p>
+    </section>
+  </main>
 
-        <section id="join" class="section alt container">
-            <h2>Join the IDRO Movement</h2>
-            <p>IDRO offers unparalleled opportunities for talented students and visionary investors to become integral parts of a mission critical to national development. Your participation can significantly accelerate India's journey towards technological sovereignty in defense and robotics.</p>
-            <div class="button-group">
-                <a href="https://forms.gle/bkAc29nS9jFuPnky7" target="_blank" class="cta-button">
-                    <i class="fas fa-user-friends"></i> Join as Team Member
-                </a>
-                <a href="mailto:idrofoundation@gmail.com?subject=Investor Inquiry - IDRO Foundation" target="_blank" class="cta-button">
-                    <i class="fas fa-money-bill-wave"></i> Join as Investor / Partner
-                </a>
-            </div>
-            <p style="margin-top: 35px; font-size: 1.1rem; text-align: center;">
-                For detailed operational frameworks and ethical guidelines, please refer to our official policy:
-                <br>
-                <a href="IDRO-Policy-2025.pdf" target="_blank" class="cta-button" style="margin-top: 20px; background-color: #007bff; color: white;">
-                    <i class="fas fa-file-alt"></i> Download IDRO Policy (PDF)
-                </a>
-            </p>
-        </section>
-
-        <section id="contact" class="section container">
-            <h2>Connect With Us</h2>
-            <p>We are always eager to engage with individuals, organizations, and stakeholders who share our vision for a stronger, more technologically advanced India. Feel free to reach out:</p>
-            <p style="font-size: 1.2rem; font-weight: 600;">Email: <a href="mailto:idrofoundation@gmail.com">idrofoundation@gmail.com</a></p>
-            <div class="social-icons">
-                <a href="http://linkedin.com/company/idrofoundation" target="_blank" aria-label="IDRO LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="https://www.instagram.com/idro.foundation/" target="_blank" aria-label="IDRO Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="https://forms.gle/JLt8C1XGz7n4LfQs9" target="_blank" aria-label="IDRO Feedback Form"><i class="fas fa-comments"></i></a>
-            </div>
-        </section>
-
-        <section id="feedback" class="section alt container">
-            <h2>💬 Your Feedback Matters</h2>
-            <p>Your insights, suggestions, and constructive criticism are invaluable. They fuel our continuous improvement and help us align IDRO's initiatives with the needs and expectations of our community and the nation.</p>
-            <a href="https://forms.gle/JLt8C1XGz7n4LfQs9" target="_blank" class="cta-button" style="background-color: #6c757d; color: white;">
-                <i class="fas fa-envelope-open-text"></i> Submit Feedback
-            </a>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <p>© <span id="currentYear">2025</span> IDRO – Indian Defense & Robotics Organization. All Rights Reserved.</p>
-            <p>Research and Innovation Foundation. Made with 💙 for Bharat 🇮🇳.</p>
-            <p><a href="policy.pdf" target="_blank">Privacy Policy</a> | <a href="#" onclick="alert('Website terms of use coming soon!'); return false;">Terms of Use</a></p>
-        </div>
-    </footer>
-
-    <script>
-        // Set the current year in the footer
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-
-        // Countdown Timer
-        const launchDate = new Date("August 15, 2025 00:00:00").getTime();
-        const timerElement = document.getElementById("timer");
-
-        function updateTimer() {
-            const now = new Date().getTime();
-            const distance = launchDate - now;
-
-            if (distance < 0) {
-                timerElement.innerHTML = "🎉 Project Launched! Check our updates!";
-                timerElement.style.color = '#FFDA44'; // Change color after launch
-                clearInterval(countdownInterval); // Stop the interval
-                return;
-            }
-
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            timerElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-        }
-
-        const countdownInterval = setInterval(updateTimer, 1000);
-        updateTimer(); // Initial call to display immediately
-
-        // Confetti Celebration for July 27 (Based on your original code's logic)
-        const today = new Date();
-        const celebrationMonth = 6; // July is month 6 (0-indexed)
-        const celebrationStartDay = 25;
-        const celebrationEndDay = 28;
-
-        if (today.getMonth() === celebrationMonth && today.getDate() >= celebrationStartDay && today.getDate() <= celebrationEndDay) {
-            setTimeout(() => {
-                confetti({
-                    particleCount: 250,
-                    spread: 120,
-                    origin: { x: Math.random(), y: Math.random() * 0.7 - 0.2 } // Random origin for dynamic effect
-                });
-            }, 1500); // 1.5 second delay after load
-            console.log("Confetti activated for celebration period!");
-        }
-
-        // Active Navigation Link Highlight based on scroll position
-        document.addEventListener('DOMContentLoaded', () => {
-            const sections = document.querySelectorAll('main section');
-            const navLinks = document.querySelectorAll('nav a');
-
-            const options = {
-                threshold: 0.5 // Adjust as needed, means 50% of the section is visible to be 'active'
-            };
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    const id = entry.target.id;
-                    const correspondingLink = document.querySelector(`nav a[href="#${id}"]`);
-
-                    if (correspondingLink) {
-                        if (entry.isIntersecting) {
-                            navLinks.forEach(link => link.classList.remove('active')); // Remove from all
-                            correspondingLink.classList.add('active'); // Add to current
-                        } else {
-                            correspondingLink.classList.remove('active'); // Remove if scrolled out
-                        }
-                    }
-                });
-            }, options);
-
-            sections.forEach(section => {
-                observer.observe(section);
-            });
-
-            // Handle active state for the "Home" link when at the very top of the page
-            window.addEventListener('scroll', () => {
-                if (window.scrollY < 100) { // Small buffer for top of page
-                    navLinks.forEach(link => link.classList.remove('active'));
-                    document.querySelector('nav a[href="#home"]').classList.add('active');
-                }
-            });
-            // Initial check for home link
-            document.querySelector('nav a[href="#home"]').classList.add('active');
-        });
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <footer>
+    <p>© 2025 IDRO – Indian Defense & Robotics Organization</p>
+    <p><a href="policy.pdf" style="color: #ccc;" target="_blank">Privacy & Website Policy</a></p>
+  </footer>
 </body>
+
+  <!-- Celebration Script -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script>
+    window.addEventListener('load', function () {
+      const launchDate = new Date("August 15, 2025 00:00:00").getTime();
+      const now = new Date().getTime();
+      if (now < launchDate) return;
+      confetti({ particleCount: 250, spread: 100, origin: { y: 0.6 } });
+    });
+  </script>
+
+  <!-- Banner -->
+  <div style="margin: 0 auto; max-width: 100%; padding: 1rem 2rem;">
+    <img src="images/BANNER Linkdin.png" alt="IDRO Banner" style="width: 100%; max-height: 300px; object-fit: cover; border-radius: 10px; border: 2px solid #00ffff;">
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="logo-container">IDRO</div>
+    <nav>
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#vision">Vision</a>
+  <a href="#media">Gallery</a>
+  <a href="#join">Join</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+  </header>
+
+  <!-- Tagline -->
+  <!-- Tagline -->
+<div class="tagline">
+  <h1 style="
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 800;
+    background: linear-gradient(to right, #00ffff, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;">
+    Indian Defense & Robotics Organization
+  </h1>
+  <p style="font-family: 'Georgia', serif; font-size: 1.4rem; color: #ffcc00;">
+    युवशक्तिः विज्ञानाय, विज्ञानं भारतरक्षणाय।
+  </p>
+  <p style="font-style: italic; color: #ccc;">
+    Youth power for science, and science for the protection of India.
+  </p>
+</div>
+
+
+  <!-- Home -->
+  <section id="home">
+    <h2>Welcome to IDRO</h2>
+    <p>We are building India's future in defense and robotics by empowering students and innovators to develop indigenous technologies for national security and self-reliance.</p>
+  </section>
+
+  <!-- About IDRO -->
+  <section id="about">
+    <h2>About IDRO</h2>
+    <p>IDRO is a student-led national platform for indigenous defense and robotics technologies.</p>
+    <p>Founded in 2025, we empower youth to build next-gen UAVs, autonomous systems, and cyber-defense tools for Bharat.</p>
+    <p style="font-size: 1.1rem; color: red; font-weight: bold;">
+      🔴 Note: IDRO is currently a <strong>non-profit and non-registered organization</strong> in its early formation phase.
+    </p>
+  </section>
+
+
+
+  <!-- Vision -->
+  <section id="vision">
+    <h2>Our Vision</h2>
+    <p>To empower Indian youth in building self-reliant defense and robotics technologies through collaboration, innovation, and national pride.</p>
+    <p>Inspired by Dr. A.P.J. Abdul Kalam's legacy, we aim to transform India into a global defense-tech leader.</p>
+  </section>
+
+  <!-- Media -->
+  <section id="media">
+    <h2>Media & Gallery</h2>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/ASmaIBPFItg" title="Flag Hoisting Drone - IDRO" allowfullscreen></iframe>
+    </div>
+    <div class="gallery-container">
+      <img src="images/flaghoisting.JPG" class="gallery-img" alt="Project Image 1">
+      <img src="images/kalam.jpg.png" class="gallery-img" alt="Project Image 2">
+      <img src="images/drone.JPG" class="gallery-img" alt="Project Image 3">
+    </div>
+  </section>
+
+  <!-- Countdown -->
+  <section id="launch-countdown">
+    <h2 style="color: #00ffff; font-size: 2rem;">🚀 New Project Launch</h2>
+    <h3 style="color: #ffcc00;">Coming This Independence Day 🇮🇳 – 15th August 2025</h3>
+    <div id="timer"></div>
+  </section>
+
+  <!-- Join -->
+  <section id="join">
+    <h2>Join the Movement</h2>
+    <p>Students and investors are welcome to join the mission.</p>
+    <div class="button-group">
+      <a href="https://forms.gle/bkAc29nS9jFuPnky7" target="_blank"><button class="cta-button">👨‍💻 Join as Team Member</button></a>
+      <a href="mailto:idrofoundation@gmail.com?subject=Investor Inquiry - IDRO" target="_blank"><button class="cta-button">💰 Join as Investor / Partner</button></a>
+    </div>
+    <p style="margin-top: 2rem;">
+      <p>
+  📄 <a href="IDRO-Policy-2025.pdf" target="_blank" style="color: #00ffff; font-weight: bold;">
+    View IDRO Policy & Guidelines (PDF)
+  </a>
+</p>
+<a href="IDRO-Policy-2025.pdf" class="cta-button" target="_blank">📄 Download IDRO Policy (PDF)</a>
+</a>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact & Social Media</h2>
+    <p>Email: <a href="mailto:idrofoundation@gmail.com">idrofoundation@gmail.com</a></p>
+    <div class="social-icons">
+      <a href="http://linkedin.com/company/idrofoundation" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.instagram.com/idro.foundation/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://forms.gle/JLt8C1XGz7n4LfQs9" target="_blank"><i class="fas fa-comments"></i></a>
+    </div>
+  </section>
+
+
+  <section id="feedback">
+  <h2>💬 Feedback & Suggestions</h2>
+  <p>Your feedback helps us grow and improve IDRO's mission. We value your thoughts and ideas.</p>
+  <a href="https://forms.gle/JLt8C1XGz7n4LfQs9" target="_blank" style="color: #00ffff; font-weight: bold;">📨 Click here to give feedback</a>
+  </section>
+
+  
+  <!-- Footer -->
+  <footer class="footer">
+    © 2025 IDRO – Research and Innovation Foundation. Made with 💙 for Bharat 🇮🇳.
+  </footer>
+
+  <!-- Countdown Script -->
+  <script>
+    const launchDate = new Date("August 15, 2025 00:00:00").getTime();
+    const timerElement = document.getElementById("timer");
+
+    function updateTimer() {
+      const now = new Date().getTime();
+      const distance = launchDate - now;
+
+      if (distance < 0) {
+        timerElement.innerHTML = "🎉 Launched!";
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      timerElement.innerHTML = ${days}d ${hours}h ${minutes}m ${seconds}s;
+    }
+
+    updateTimer();
+    setInterval(updateTimer, 1000);
+  </script>
+
+
+  <!-- Confetti Celebration for July 27 -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+<script>
+  const now = new Date();
+const isCelebrationDay = now.getDate() >= 25 && now.getDate() <= 28 && now.getMonth() === 6;
+
+  if (isCelebrationDay) {
+    setTimeout(() => {
+      confetti({
+        particleCount: 250,
+        spread: 120,
+        origin: { y: 0.6 }
+      });
+    }, 1000); // 1 second delay
+  }
+</script>
+
 </html>
