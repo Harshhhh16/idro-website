@@ -349,42 +349,43 @@
 
 
 <script>
-  // Create a confetti instance using a dedicated full-page canvas
   const fireworks = confetti.create(null, { resize: true, useWorker: true });
 
   function fireworkPulse() {
     fireworks({
-      particleCount: 300,
-      spread: 200,
-      startVelocity: 45,
-      gravity: 0.8,
+      particleCount: 120,
+      spread: 140,
+      startVelocity: 50,
+      gravity: 0.9,
       ticks: 200,
       origin: { x: 0.5, y: 0.5 },
       colors: ['#ffcc00', '#00ffff', '#ffffff', '#ff0043'],
-      shapes: ['circle', 'square', 'star'],
-      scalar: 1.2,
+      shapes: ['circle', 'square'],
+      scalar: 1.1,
       zIndex: 9999,
       disableForReducedMotion: true
     });
   }
 
-  function launchFireworks(duration = 5000, intervalMs = 400) {
-    const end = Date.now() + duration;
-    const loop = setInterval(() => {
+  function launchThreeFireworks() {
+    let count = 0;
+    const interval = setInterval(() => {
       fireworkPulse();
-      if (Date.now() > end) clearInterval(loop);
-    }, intervalMs);
+      count++;
+      if (count >= 3) clearInterval(interval);
+    }, 800); // 800ms gap between each firework
   }
 
-  // Fireworks activate on these special dates
+  // Trigger on special days
   window.addEventListener('load', () => {
     const today = new Date().toISOString().split('T')[0];
     const specialDays = ['2025-07-26', '2025-07-27', '2025-08-15'];
     if (specialDays.includes(today)) {
-      launchFireworks(5000, 400); // 8-second fireworks show
+      launchThreeFireworks();
     }
   });
 </script>
+
 
 
 
