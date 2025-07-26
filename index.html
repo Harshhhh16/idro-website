@@ -354,12 +354,12 @@
 
   function fireworkPulse() {
     fireworks({
-      particleCount: 150,
-      spread: 160,
+      particleCount: 300,
+      spread: 200,
       startVelocity: 45,
       gravity: 0.8,
       ticks: 200,
-      origin: { x: 0.5, y: 0.5 },
+      origin: { x: 0.7, y: 0.7 },
       colors: ['#ffcc00', '#00ffff', '#ffffff', '#ff0043'],
       shapes: ['circle', 'square', 'star'],
       scalar: 1.2,
@@ -381,7 +381,7 @@
     const today = new Date().toISOString().split('T')[0];
     const specialDays = ['2025-07-26', '2025-07-27', '2025-08-15'];
     if (specialDays.includes(today)) {
-      launchFireworks(8000, 800); // 8-second fireworks show
+      launchFireworks(5000, 400); // 8-second fireworks show
     }
   });
 </script>
