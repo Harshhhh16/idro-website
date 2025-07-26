@@ -294,11 +294,7 @@
   </a>
 </p>
 <a href="IDRO-Policy-2025.pdf" class="cta-button" target="_blank">📄 Download IDRO Policy (PDF)</a>
-
-
-
 </a>
-
   </section>
 
   <!-- Contact -->
@@ -350,5 +346,25 @@
     updateTimer();
     setInterval(updateTimer, 1000);
   </script>
+
+
+  <script>
+window.addEventListener('load', function () {
+  const today = new Date();
+  const currentDate = today.toISOString().split("T")[0]; // Format: YYYY-MM-DD
+
+  // 🎉 Celebration active on these dates
+  const celebrationDays = ["2025-07-26", "2025-07-27", "2025-07-28", "2025-07-29"];
+
+  if (celebrationDays.includes(currentDate)) {
+    confetti({
+      particleCount: 250,
+      spread: 100,
+      origin: { y: 0.6 }
+    });
+  }
+});
+</script>
+
 </body>
 </html>
