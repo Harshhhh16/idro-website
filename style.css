@@ -6,15 +6,8 @@
   <meta name="google-site-verification" content="RflUZwL09jb8Pv-1ZCcFmj4HIXJDFAcptu9qoYo2nxg" />
   <meta name="description" content="IDRO – Indian Defense & Robotics Organization is a student-led platform building indigenous defense and robotics technologies in India. Join the mission." />
   <meta name="robots" content="index, follow" />
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  <link rel="canonical" href="https://idrofoundation.netlify.app/" />
   <title>IDRO – Indian Defense & Robotics Organization</title>
-
-
-  <meta property="og:title" content="IDRO – Indian Defense & Robotics Organization" />
-  <meta property="og:description" content="A student-led national initiative building India's defense & robotics future." />
-  <meta property="og:image" content="https://idrofoundation.netlify.app/images/BANNER%20Linkdin.png" />
-  <meta property="og:url" content="https://idrofoundation.netlify.app/" />
-
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9BCN2KMNVV"></script>
@@ -202,14 +195,12 @@
   <header>
     <div class="logo-container">IDRO</div>
     <nav>
-  <a href="#home">Home</a>
-  <a href="#about">About</a>
-  <a href="#vision">Vision</a>
-  <a href="#media">Gallery</a>
-  <a href="#join">Join</a>
-  <a href="#contact">Contact</a>
-</nav>
-
+      <a href="#home">Home</a>
+      <a href="#vision">Vision</a>
+      <a href="#join">Join</a>
+      <a href="#media">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
   <!-- Tagline -->
@@ -250,8 +241,6 @@
     </p>
   </section>
 
-
-
   <!-- Vision -->
   <section id="vision">
     <h2>Our Vision</h2>
@@ -288,15 +277,7 @@
       <a href="mailto:idrofoundation@gmail.com?subject=Investor Inquiry - IDRO" target="_blank"><button class="cta-button">💰 Join as Investor / Partner</button></a>
     </div>
     <p style="margin-top: 2rem;">
-      <p>
-  📄 <a href="IDRO-Policy-2025.pdf" target="_blank" style="color: #00ffff; font-weight: bold;">
-    View IDRO Policy & Guidelines (PDF)
-  </a>
-</p>
-<a href="IDRO-Policy-2025.pdf" class="cta-button" target="_blank">📄 Download IDRO Policy (PDF)</a>
-
-
-
+      📄<a href="IDRO-Policy-2025.pdf" target="_blank" style="color: #00ffff; font-weight: bold;">View IDRO Policy & Guidelines (PDF)
 </a>
 
   </section>
@@ -312,14 +293,6 @@
     </div>
   </section>
 
-
-  <section id="feedback">
-  <h2>💬 Feedback & Suggestions</h2>
-  <p>Your feedback helps us grow and improve IDRO's mission. We value your thoughts and ideas.</p>
-  <a href="https://forms.gle/JLt8C1XGz7n4LfQs9" target="_blank" style="color: #00ffff; font-weight: bold;">📨 Click here to give feedback</a>
-  </section>
-
-  
   <!-- Footer -->
   <footer class="footer">
     © 2025 IDRO – Research and Innovation Foundation. Made with 💙 for Bharat 🇮🇳.
@@ -344,11 +317,11 @@
       const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-      timerElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+      timerElement.innerHTML = ${days}d ${hours}h ${minutes}m ${seconds}s;
     }
 
     updateTimer();
     setInterval(updateTimer, 1000);
   </script>
 </body>
-</html> 
+</html>
