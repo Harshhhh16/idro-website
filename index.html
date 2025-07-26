@@ -349,35 +349,41 @@
 
 
 <script>
-function fireworkBurst(x, y) {
-  confetti({
-    particleCount: 100,
-    spread: 70,
-    origin: { x: x, y: y },
-    colors: ['#ff0043', '#00ffff', '#ffffff', '#ffcc00']
-  });
-}
+  // Create a confetti instance using a dedicated full-page canvas
+  const fireworks = confetti.create(null, { resize: true, useWorker: true });
 
-function launchFireworks() {
-  const interval = setInterval(() => {
-    fireworkBurst(0.5, 0.5); // Center of screen
-  }, 600);
-
-  // Stop after 6 seconds
-  setTimeout(() => {
-    clearInterval(interval);
-  }, 6000);
-}
-
-// 🎆 Celebration on specific dates
-window.addEventListener('load', function () {
-  const today = new Date().toISOString().split("T")[0];
-  const fireworkDays = ["2025-07-26", "2025-07-27", "2025-08-15"];
-
-  if (fireworkDays.includes(today)) {
-    launchFireworks();
+  function fireworkPulse() {
+    fireworks({
+      particleCount: 150,
+      spread: 160,
+      startVelocity: 45,
+      gravity: 0.8,
+      ticks: 200,
+      origin: { x: 0.5, y: 0.5 },
+      colors: ['#ffcc00', '#00ffff', '#ffffff', '#ff0043'],
+      shapes: ['circle', 'square', 'star'],
+      scalar: 1.2,
+      zIndex: 9999,
+      disableForReducedMotion: true
+    });
   }
-});
+
+  function launchFireworks(duration = 8000, intervalMs = 800) {
+    const end = Date.now() + duration;
+    const loop = setInterval(() => {
+      fireworkPulse();
+      if (Date.now() > end) clearInterval(loop);
+    }, intervalMs);
+  }
+
+  // Fireworks activate on these special dates
+  window.addEventListener('load', () => {
+    const today = new Date().toISOString().split('T')[0];
+    const specialDays = ['2025-07-26', '2025-07-27', '2025-08-15'];
+    if (specialDays.includes(today)) {
+      launchFireworks(8000, 800); // 8-second fireworks show
+    }
+  });
 </script>
 
 
