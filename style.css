@@ -1,242 +1,483 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>IDRO – Indian Defense & Robotics Organization</title>
 
-  <!-- Open Graph Meta for Social Sharing -->
-  <meta property="og:title" content="IDRO – Indian Defense & Robotics Organization" />
-  <meta property="og:description" content="A student-led national initiative building India's defense & robotics future." />
-  <meta property="og:image" content="https://idrofoundation.netlify.app/images/BANNER%20Linkdin.png" />
-  <meta property="og:url" content="https://idrofoundation.netlify.app/" />
-  <meta name="theme-color" content="#0d1b2a" />
+  <meta charset="UTF-8" />
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto&display=swap" rel="stylesheet" />
-  
-  <!-- Styles (optional if you have external CSS) -->
-  <style>
-   <body>
-  <header>
-    <h1>IDRO</h1>
-    <p>Indian Defense & Robotics Organization</p>
-  </header>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <main>
-    <section id="about">
-      <h2>About</h2>
-      <p>IDRO is a student-led national initiative dedicated to indigenous defense and robotics technology development in India.</p>
-    </section>
+  <title>IDRO – Indian Defense & Robotics Organization</title>
 
-    <section id="vision">
-      <h2>Vision</h2>
-      <p>To empower young innovators in building India's future in defense technology and robotics through collaboration, research, and innovation.</p>
-    </section>
 
-    <section id="gallery">
-      <h2>Gallery</h2>
-      <p>(Add images or media here)</p>
-    </section>
 
-    <section id="join">
-      <h2>Join Us</h2>
-      <p>(Add form or joining info here)</p>
-    </section>
+  <!-- Open Graph Meta for Social Sharing -->
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:idro.foundation@gmail.com">idro.foundation@gmail.com</a></p>
-    </section>
-  </main>
+  <meta property="og:title" content="IDRO – Indian Defense & Robotics Organization" />
 
-  <footer>
-    <p>© 2025 IDRO – Indian Defense & Robotics Organization</p>
-    <p><a href="policy.pdf" style="color: #ccc;" target="_blank">Privacy & Website Policy</a></p>
-  </footer>
+  <meta property="og:description" content="A student-led national initiative building India's defense & robotics future." />
+
+  <meta property="og:image" content="https://idrofoundation.netlify.app/images/BANNER%20Linkdin.png" />
+
+  <meta property="og:url" content="https://idrofoundation.netlify.app/" />
+
+  <meta name="theme-color" content="#0d1b2a" />
+
+
+
+  <!-- Fonts -->
+
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+
+  
+
+  <!-- Styles (optional if you have external CSS) -->
+
+  <style>
+
+   <body>
+
+  <header>
+
+    <h1>IDRO</h1>
+
+    <p>Indian Defense & Robotics Organization</p>
+
+  </header>
+
+
+
+  <main>
+
+    <section id="about">
+
+      <h2>About</h2>
+
+      <p>IDRO is a student-led national initiative dedicated to indigenous defense and robotics technology development in India.</p>
+
+    </section>
+
+
+
+    <section id="vision">
+
+      <h2>Vision</h2>
+
+      <p>To empower young innovators in building India's future in defense technology and robotics through collaboration, research, and innovation.</p>
+
+    </section>
+
+
+
+    <section id="gallery">
+
+      <h2>Gallery</h2>
+
+      <p>(Add images or media here)</p>
+
+    </section>
+
+
+
+    <section id="join">
+
+      <h2>Join Us</h2>
+
+      <p>(Add form or joining info here)</p>
+
+    </section>
+
+
+
+    <section id="contact">
+
+      <h2>Contact</h2>
+
+      <p>Email: <a href="mailto:idro.foundation@gmail.com">idro.foundation@gmail.com</a></p>
+
+    </section>
+
+  </main>
+
+
+
+  <footer>
+
+    <p>© 2025 IDRO – Indian Defense & Robotics Organization</p>
+
+    <p><a href="policy.pdf" style="color: #ccc;" target="_blank">Privacy & Website Policy</a></p>
+
+  </footer>
+
 </body>
 
-  <!-- Celebration Script -->
-  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-  <script>
-    window.addEventListener('load', function () {
-      const launchDate = new Date("August 15, 2025 00:00:00").getTime();
-      const now = new Date().getTime();
-      if (now < launchDate) return;
-      confetti({ particleCount: 250, spread: 100, origin: { y: 0.6 } });
-    });
-  </script>
 
-  <!-- Banner -->
-  <div style="margin: 0 auto; max-width: 100%; padding: 1rem 2rem;">
-    <img src="images/BANNER Linkdin.png" alt="IDRO Banner" style="width: 100%; max-height: 300px; object-fit: cover; border-radius: 10px; border: 2px solid #00ffff;">
-  </div>
 
-  <!-- Header -->
-  <header>
-    <div class="logo-container">IDRO</div>
-    <nav>
-  <a href="#home">Home</a>
-  <a href="#about">About</a>
-  <a href="#vision">Vision</a>
-  <a href="#media">Gallery</a>
-  <a href="#join">Join</a>
-  <a href="#contact">Contact</a>
+  <!-- Celebration Script -->
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <script>
+
+    window.addEventListener('load', function () {
+
+      const launchDate = new Date("August 15, 2025 00:00:00").getTime();
+
+      const now = new Date().getTime();
+
+      if (now < launchDate) return;
+
+      confetti({ particleCount: 250, spread: 100, origin: { y: 0.6 } });
+
+    });
+
+  </script>
+
+
+
+  <!-- Banner -->
+
+  <div style="margin: 0 auto; max-width: 100%; padding: 1rem 2rem;">
+
+    <img src="images/BANNER Linkdin.png" alt="IDRO Banner" style="width: 100%; max-height: 300px; object-fit: cover; border-radius: 10px; border: 2px solid #00ffff;">
+
+  </div>
+
+
+
+  <!-- Header -->
+
+  <header>
+
+    <div class="logo-container">IDRO</div>
+
+    <nav>
+
+  <a href="#home">Home</a>
+
+  <a href="#about">About</a>
+
+  <a href="#vision">Vision</a>
+
+  <a href="#media">Gallery</a>
+
+  <a href="#join">Join</a>
+
+  <a href="#contact">Contact</a>
+
 </nav>
 
-  </header>
 
-  <!-- Tagline -->
-  <!-- Tagline -->
+
+  </header>
+
+
+
+  <!-- Tagline -->
+
+  <!-- Tagline -->
+
 <div class="tagline">
-  <h1 style="
-    font-family: 'Orbitron', sans-serif;
-    font-size: 2.8rem;
-    font-weight: 800;
-    background: linear-gradient(to right, #00ffff, #ffffff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 10px;">
-    Indian Defense & Robotics Organization
-  </h1>
-  <p style="font-family: 'Georgia', serif; font-size: 1.4rem; color: #ffcc00;">
-    युवशक्तिः विज्ञानाय, विज्ञानं भारतरक्षणाय।
-  </p>
-  <p style="font-style: italic; color: #ccc;">
-    Youth power for science, and science for the protection of India.
-  </p>
+
+  <h1 style="
+
+    font-family: 'Orbitron', sans-serif;
+
+    font-size: 2.8rem;
+
+    font-weight: 800;
+
+    background: linear-gradient(to right, #00ffff, #ffffff);
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    margin-bottom: 10px;">
+
+    Indian Defense & Robotics Organization
+
+  </h1>
+
+  <p style="font-family: 'Georgia', serif; font-size: 1.4rem; color: #ffcc00;">
+
+    युवशक्तिः विज्ञानाय, विज्ञानं भारतरक्षणाय।
+
+  </p>
+
+  <p style="font-style: italic; color: #ccc;">
+
+    Youth power for science, and science for the protection of India.
+
+  </p>
+
 </div>
 
 
-  <!-- Home -->
-  <section id="home">
-    <h2>Welcome to IDRO</h2>
-    <p>We are building India's future in defense and robotics by empowering students and innovators to develop indigenous technologies for national security and self-reliance.</p>
-  </section>
-
-  <!-- About IDRO -->
-  <section id="about">
-    <h2>About IDRO</h2>
-    <p>IDRO is a student-led national platform for indigenous defense and robotics technologies.</p>
-    <p>Founded in 2025, we empower youth to build next-gen UAVs, autonomous systems, and cyber-defense tools for Bharat.</p>
-    <p style="font-size: 1.1rem; color: red; font-weight: bold;">
-      🔴 Note: IDRO is currently a <strong>non-profit and non-registered organization</strong> in its early formation phase.
-    </p>
-  </section>
 
 
 
-  <!-- Vision -->
-  <section id="vision">
-    <h2>Our Vision</h2>
-    <p>To empower Indian youth in building self-reliant defense and robotics technologies through collaboration, innovation, and national pride.</p>
-    <p>Inspired by Dr. A.P.J. Abdul Kalam's legacy, we aim to transform India into a global defense-tech leader.</p>
-  </section>
+  <!-- Home -->
 
-  <!-- Media -->
-  <section id="media">
-    <h2>Media & Gallery</h2>
-    <div class="video-container">
-      <iframe src="https://www.youtube.com/embed/ASmaIBPFItg" title="Flag Hoisting Drone - IDRO" allowfullscreen></iframe>
-    </div>
-    <div class="gallery-container">
-      <img src="images/flaghoisting.JPG" class="gallery-img" alt="Project Image 1">
-      <img src="images/kalam.jpg.png" class="gallery-img" alt="Project Image 2">
-      <img src="images/drone.JPG" class="gallery-img" alt="Project Image 3">
-    </div>
-  </section>
+  <section id="home">
 
-  <!-- Countdown -->
-  <section id="launch-countdown">
-    <h2 style="color: #00ffff; font-size: 2rem;">🚀 New Project Launch</h2>
-    <h3 style="color: #ffcc00;">Coming This Independence Day 🇮🇳 – 15th August 2025</h3>
-    <div id="timer"></div>
-  </section>
+    <h2>Welcome to IDRO</h2>
 
-  <!-- Join -->
-  <section id="join">
-    <h2>Join the Movement</h2>
-    <p>Students and investors are welcome to join the mission.</p>
-    <div class="button-group">
-      <a href="https://forms.gle/bkAc29nS9jFuPnky7" target="_blank"><button class="cta-button">👨‍💻 Join as Team Member</button></a>
-      <a href="mailto:idrofoundation@gmail.com?subject=Investor Inquiry - IDRO" target="_blank"><button class="cta-button">💰 Join as Investor / Partner</button></a>
-    </div>
-    <p style="margin-top: 2rem;">
-      <p>
-  📄 <a href="IDRO-Policy-2025.pdf" target="_blank" style="color: #00ffff; font-weight: bold;">
-    View IDRO Policy & Guidelines (PDF)
-  </a>
+    <p>We are building India's future in defense and robotics by empowering students and innovators to develop indigenous technologies for national security and self-reliance.</p>
+
+  </section>
+
+
+
+  <!-- About IDRO -->
+
+  <section id="about">
+
+    <h2>About IDRO</h2>
+
+    <p>IDRO is a student-led national platform for indigenous defense and robotics technologies.</p>
+
+    <p>Founded in 2025, we empower youth to build next-gen UAVs, autonomous systems, and cyber-defense tools for Bharat.</p>
+
+    <p style="font-size: 1.1rem; color: red; font-weight: bold;">
+
+      🔴 Note: IDRO is currently a <strong>non-profit and non-registered organization</strong> in its early formation phase.
+
+    </p>
+
+  </section>
+
+
+
+
+
+
+
+  <!-- Vision -->
+
+  <section id="vision">
+
+    <h2>Our Vision</h2>
+
+    <p>To empower Indian youth in building self-reliant defense and robotics technologies through collaboration, innovation, and national pride.</p>
+
+    <p>Inspired by Dr. A.P.J. Abdul Kalam's legacy, we aim to transform India into a global defense-tech leader.</p>
+
+  </section>
+
+
+
+  <!-- Media -->
+
+  <section id="media">
+
+    <h2>Media & Gallery</h2>
+
+    <div class="video-container">
+
+      <iframe src="https://www.youtube.com/embed/ASmaIBPFItg" title="Flag Hoisting Drone - IDRO" allowfullscreen></iframe>
+
+    </div>
+
+    <div class="gallery-container">
+
+      <img src="images/flaghoisting.JPG" class="gallery-img" alt="Project Image 1">
+
+      <img src="images/kalam.jpg.png" class="gallery-img" alt="Project Image 2">
+
+      <img src="images/drone.JPG" class="gallery-img" alt="Project Image 3">
+
+    </div>
+
+  </section>
+
+
+
+  <!-- Countdown -->
+
+  <section id="launch-countdown">
+
+    <h2 style="color: #00ffff; font-size: 2rem;">🚀 New Project Launch</h2>
+
+    <h3 style="color: #ffcc00;">Coming This Independence Day 🇮🇳 – 15th August 2025</h3>
+
+    <div id="timer"></div>
+
+  </section>
+
+
+
+  <!-- Join -->
+
+  <section id="join">
+
+    <h2>Join the Movement</h2>
+
+    <p>Students and investors are welcome to join the mission.</p>
+
+    <div class="button-group">
+
+      <a href="https://forms.gle/bkAc29nS9jFuPnky7" target="_blank"><button class="cta-button">👨‍💻 Join as Team Member</button></a>
+
+      <a href="mailto:idrofoundation@gmail.com?subject=Investor Inquiry - IDRO" target="_blank"><button class="cta-button">💰 Join as Investor / Partner</button></a>
+
+    </div>
+
+    <p style="margin-top: 2rem;">
+
+      <p>
+
+  📄 <a href="IDRO-Policy-2025.pdf" target="_blank" style="color: #00ffff; font-weight: bold;">
+
+    View IDRO Policy & Guidelines (PDF)
+
+  </a>
+
 </p>
+
 <a href="IDRO-Policy-2025.pdf" class="cta-button" target="_blank">📄 Download IDRO Policy (PDF)</a>
+
 </a>
-  </section>
 
-  <!-- Contact -->
-  <section id="contact">
-    <h2>Contact & Social Media</h2>
-    <p>Email: <a href="mailto:idrofoundation@gmail.com">idrofoundation@gmail.com</a></p>
-    <div class="social-icons">
-      <a href="http://linkedin.com/company/idrofoundation" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="https://www.instagram.com/idro.foundation/" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://forms.gle/JLt8C1XGz7n4LfQs9" target="_blank"><i class="fas fa-comments"></i></a>
-    </div>
-  </section>
+  </section>
 
 
-  <section id="feedback">
-  <h2>💬 Feedback & Suggestions</h2>
-  <p>Your feedback helps us grow and improve IDRO's mission. We value your thoughts and ideas.</p>
-  <a href="https://forms.gle/JLt8C1XGz7n4LfQs9" target="_blank" style="color: #00ffff; font-weight: bold;">📨 Click here to give feedback</a>
-  </section>
 
-  
-  <!-- Footer -->
-  <footer class="footer">
-    © 2025 IDRO – Research and Innovation Foundation. Made with 💙 for Bharat 🇮🇳.
-  </footer>
+  <!-- Contact -->
 
-  <!-- Countdown Script -->
-  <script>
-    const launchDate = new Date("August 15, 2025 00:00:00").getTime();
-    const timerElement = document.getElementById("timer");
+  <section id="contact">
 
-    function updateTimer() {
-      const now = new Date().getTime();
-      const distance = launchDate - now;
+    <h2>Contact & Social Media</h2>
 
-      if (distance < 0) {
-        timerElement.innerHTML = "🎉 Launched!";
-        return;
-      }
+    <p>Email: <a href="mailto:idrofoundation@gmail.com">idrofoundation@gmail.com</a></p>
 
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    <div class="social-icons">
 
-      timerElement.innerHTML = ${days}d ${hours}h ${minutes}m ${seconds}s;
-    }
+      <a href="http://linkedin.com/company/idrofoundation" target="_blank"><i class="fab fa-linkedin"></i></a>
 
-    updateTimer();
-    setInterval(updateTimer, 1000);
-  </script>
+      <a href="https://www.instagram.com/idro.foundation/" target="_blank"><i class="fab fa-instagram"></i></a>
+
+      <a href="https://forms.gle/JLt8C1XGz7n4LfQs9" target="_blank"><i class="fas fa-comments"></i></a>
+
+    </div>
+
+  </section>
 
 
-  <!-- Confetti Celebration for July 27 -->
+
+
+
+  <section id="feedback">
+
+  <h2>💬 Feedback & Suggestions</h2>
+
+  <p>Your feedback helps us grow and improve IDRO's mission. We value your thoughts and ideas.</p>
+
+  <a href="https://forms.gle/JLt8C1XGz7n4LfQs9" target="_blank" style="color: #00ffff; font-weight: bold;">📨 Click here to give feedback</a>
+
+  </section>
+
+
+
+  
+
+  <!-- Footer -->
+
+  <footer class="footer">
+
+    © 2025 IDRO – Research and Innovation Foundation. Made with 💙 for Bharat 🇮🇳.
+
+  </footer>
+
+
+
+  <!-- Countdown Script -->
+
+  <script>
+
+    const launchDate = new Date("August 15, 2025 00:00:00").getTime();
+
+    const timerElement = document.getElementById("timer");
+
+
+
+    function updateTimer() {
+
+      const now = new Date().getTime();
+
+      const distance = launchDate - now;
+
+
+
+      if (distance < 0) {
+
+        timerElement.innerHTML = "🎉 Launched!";
+
+        return;
+
+      }
+
+
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+
+
+      timerElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+    }
+
+
+
+    updateTimer();
+
+    setInterval(updateTimer, 1000);
+
+  </script>
+
+
+
+
+
+  <!-- Confetti Celebration for July 27 -->
+
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
 <script>
-  const now = new Date();
+
+  const now = new Date();
+
 const isCelebrationDay = now.getDate() >= 25 && now.getDate() <= 28 && now.getMonth() === 6;
 
-  if (isCelebrationDay) {
-    setTimeout(() => {
-      confetti({
-        particleCount: 250,
-        spread: 120,
-        origin: { y: 0.6 }
-      });
-    }, 1000); // 1 second delay
-  }
+
+
+  if (isCelebrationDay) {
+
+    setTimeout(() => {
+
+      confetti({
+
+        particleCount: 250,
+
+        spread: 120,
+
+        origin: { y: 0.6 }
+
+      });
+
+    }, 1000); // 1 second delay
+
+  }
+
 </script>
+
+
 
 </html>
